@@ -43,7 +43,7 @@ export const manicureDetails: ServiceDetails = {
 export const manicureGallery: readonly GalleryItem[] = [
   {
     type: 'video',
-    src: '/detail/WhatsApp%20Video%202025-10-28%20at%2012.09.15%20AM.mp4',
+    src: '/detail/WhatsApp Video 2025-10-28 at 12.09.15 AM.mp4',
     poster: '/detail/one.jpg',
   },
   { type: 'image', src: '/detail/one.jpg' },
