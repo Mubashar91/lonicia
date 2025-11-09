@@ -127,11 +127,16 @@ const Services = () => {
                 }}
               >
                 {/* Service Image */}
-                <Link to={href} className="w-full h-[420px] overflow-hidden rounded-[20px] block">
+                <Link to={href} className="w-full h-[260px] sm:h-[340px] md:h-[420px] overflow-hidden rounded-[20px] block">
                   <img 
-                    src={card.url} 
+                    src={encodeURI(card.url)} 
                     alt={card.title} 
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    width={800}
+                    height={600}
                     referrerPolicy="no-referrer"
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
