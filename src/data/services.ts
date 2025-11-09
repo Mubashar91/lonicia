@@ -90,7 +90,7 @@ export const lashDetails: ServiceDetails = {
     "Wake up ready with effortless, camera‑ready lashes that elevate your everyday look.",
   mainImage: '/lash/lashone.jpeg',
 };
-
+ 
 export const lashGallery: readonly GalleryItem[] = [
   // First, make the tall big card a video
   { type: 'video', src: '/lash/lash1video.mp4', poster: '/lash/lashone.jpeg' },
