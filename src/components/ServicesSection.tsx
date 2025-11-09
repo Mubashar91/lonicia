@@ -101,7 +101,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
                   onError={(e) => {
                     const target = e.currentTarget as HTMLImageElement;
                     // Fallback to a stable placeholder per card index
-                    target.src = `https://picsum.photos/seed/service-${idx}/800/600`;
+                    // target.src = `https://picsum.photos/seed/service-${idx}/800/600`;
                   }}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />

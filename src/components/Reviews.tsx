@@ -20,8 +20,9 @@ const Reviews = () => {
     if (!el) return;
     const card = el.querySelector('[data-card]') as HTMLElement;
     if (!card) return;
-    const gap = 24;
-    const cardsToShow = window.innerWidth < 768 ? 1 : 3;
+    const width = window.innerWidth;
+    const gap = width >= 1024 ? 24 : width >= 768 ? 16 : 0;
+    const cardsToShow = width >= 1024 ? 3 : width >= 768 ? 2 : 1;
     const step = (card.offsetWidth + gap) * cardsToShow;
     el.scrollBy({ left: dir * step, behavior: 'smooth' });
   };
@@ -47,7 +48,7 @@ const Reviews = () => {
   return (
     <>
     <section className="py-16 bg-black text-white">
-      <div className="mx-auto px-6 md:px-[150px] max-w-screen-2xl">
+      <div className="mx-auto px-4 md:px-8 lg:px-16 xl:px-[150px] max-w-screen-2xl">
 
         {/* Header */}
         <p className="text-center text-gray-400 text-xs uppercase tracking-widest mb-3">
@@ -82,14 +83,14 @@ const Reviews = () => {
 
           <div
             ref={videoRef}
-            className="flex gap-0 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-0 md:gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ scrollPadding: '24px' }}
           >
             {videos.map((src, i) => (
               <div
                 key={i}
                 data-card
-                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(33.333%-16px)]"
+                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                   <div className="relative">
@@ -151,14 +152,14 @@ const Reviews = () => {
 
           <div
             ref={reviewRef}
-            className="flex gap-0 md:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex gap-0 md:gap-4 lg:gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-10 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             style={{ scrollPadding: '24px' }}
           >
             {testimonials.map((t) => (
               <div
                 key={t.id}
                 data-card
-                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(33.333%-16px)]"
+                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 {/* SAME HEIGHT CARD */}
                 <div
