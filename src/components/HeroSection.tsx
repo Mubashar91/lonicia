@@ -1,4 +1,5 @@
 // src/components/HeroSection.tsx
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -42,13 +43,13 @@ const HeroSection = () => {
 
               <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 {['LARNACA', 'NICOSIA'].map((city) => (
-                  <a
+                  <Link
                     key={city}
-                    href="/contact"
+                    to="/contact"
                     className={`rounded-md border border-black/20 bg-gradient-to-b from-yellow-400 to-amber-500 px-4 py-3 text-sm tracking-normal font-bold uppercase text-black shadow-sm transition duration-300 whitespace-nowrap sm:px-8 sm:py-4 sm:text-base sm:tracking-wide transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] hover:shadow-md hover:from-amber-400 hover:to-yellow-500 hover:saturate-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black`}
                   >
                     BOOK NOW {city}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

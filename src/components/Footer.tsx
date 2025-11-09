@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="bg-primary-dark text-primary-gold">
@@ -104,12 +106,12 @@ const Footer = () => {
           <div>
             <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-y-2 md:block md:space-y-3 text-sm">
-              <li><a href="/" className="hover:text-primary-gold transition">Home</a></li>
-              <li><a href="/price-list" className="hover:text-primary-gold transition">Price List</a></li>
-              <li><a href="/services" className="hover:text-primary-gold transition">Services</a></li>
-              <li><a href="/shops" className="hover:text-primary-gold transition">Shops</a></li>
-              <li><a href="/about" className="hover:text-primary-gold transition">About Us</a></li>
-              <li><a href="/contact" className="hover:text-primary-gold transition">Contact Us</a></li>
+              <li><Link to="/" className="hover:text-primary-gold transition">Home</Link></li>
+              <li><Link to="/price-list" className="hover:text-primary-gold transition">Price List</Link></li>
+              <li><Link to="/services" className="hover:text-primary-gold transition">Services</Link></li>
+              <li><Link to="/shops" className="hover:text-primary-gold transition">Shops</Link></li>
+              <li><Link to="/about" className="hover:text-primary-gold transition">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-primary-gold transition">Contact Us</Link></li>
             </ul>
           </div>
 

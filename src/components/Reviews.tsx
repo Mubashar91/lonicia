@@ -95,7 +95,7 @@ const Reviews = () => {
           Reviews
         </p>
         <h2 className="text-center text-primary-gold font-poppins text-4xl md:text-5xl font-light mb-14">
-          See the Process, Hear the Praise
+        Look what we do. The results say it all
         </h2>
 
         {/* VIDEO SLIDER */}
