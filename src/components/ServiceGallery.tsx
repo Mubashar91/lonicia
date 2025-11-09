@@ -76,11 +76,57 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
         {/* Top controls row */}
        
 
-        <div ref={scrollContainerRef} className="flex md:grid md:grid-cols-4 gap-2 md:gap-1 overflow-x-auto snap-x snap-mandatory scroll-smooth md:overflow-visible [scrollbar-width:none] [msOverflowStyle:none] [&::-webkit-scrollbar]:hidden">
+        {/* MOBILE: show ALL items in one horizontal scroller */}
+        <div
+          ref={scrollContainerRef}
+          className="md:hidden flex gap-0 overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [msOverflowStyle:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {items.map((item, actualIndex) => (
+            <div
+              key={`m-${actualIndex}`}
+              className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} snap-start shrink-0 w-[calc(100vw-32px)] relative overflow-hidden rounded-none bg-black cursor-pointer`}
+              onClick={() => onChange(actualIndex)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') onChange(actualIndex);
+              }}
+            >
+              <div className="h-[68vh]"></div>
+              {item.type === 'video' ? (
+                <video
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src={encodeURI(item.src)}
+                  poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
+                  muted
+                  loop
+                  autoPlay={actualIndex === activeIndex}
+                  playsInline
+                  preload={actualIndex === activeIndex ? 'auto' : 'metadata'}
+                  onPlay={(e) => pauseOthers(e.currentTarget)}
+                />
+              ) : (
+                <img
+                  src={encodeURI(item.src)}
+                  alt="Service work"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    const el = e.currentTarget as HTMLImageElement;
+                    el.src = '/placeholder.jpg';
+                  }}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* DESKTOP/TABLET (md+): preserve original sliced layout with '+more' */}
+        <div className="hidden md:grid md:grid-cols-4 gap-1 overflow-visible">
           {items.slice(0, 1).map((item, idx) => (
             <div
               key={`tall-${idx}`}
-              className={`${idx === activeIndex ? 'ring-2 ring-blue-500' : activeIndex === 0 ? 'ring-1 ring-black' : 'ring-1 ring-black'} snap-center shrink-0 w-full md:w-auto relative overflow-hidden rounded-xl md:rounded-none bg-black cursor-pointer md:col-span-1 md:row-span-2`}
+              className={`${idx === activeIndex ? 'ring-2 ring-blue-500' : activeIndex === 0 ? 'ring-1 ring-black' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer md:col-span-1 md:row-span-2`}
               onClick={() => onChange(0)}
               role="button"
               tabIndex={0}
@@ -88,7 +134,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                 if (e.key === 'Enter' || e.key === ' ') onChange(0);
               }}
             >
-              <div className="pb-[40%] md:pb-[70%]"></div>
+              <div className="pb-[70%]"></div>
               {item.type === 'video' ? (
                 <video
                   className="absolute inset-0 w-full h-full object-cover"
@@ -121,7 +167,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
             return (
               <div
                 key={`small-${actualIndex}`}
-                className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} snap-center shrink-0 w-full md:w-auto relative overflow-hidden rounded-xl md:rounded-none bg-black cursor-pointer`}
+                className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer`}
                 onClick={() => onChange(actualIndex)}
                 role="button"
                 tabIndex={0}
@@ -129,7 +175,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                   if (e.key === 'Enter' || e.key === ' ') onChange(actualIndex);
                 }}
               >
-                <div className="pb-[60%] md:pb-[75%]"></div>
+                <div className="pb-[75%]"></div>
                 {item.type === 'video' ? (
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -163,7 +209,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
             return (
               <div
                 key={`small-${actualIndex}`}
-                className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} snap-center shrink-0 w-full md:w-auto relative overflow-hidden rounded-xl md:rounded-none bg-black cursor-pointer`}
+                className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer`}
                 onClick={() => onChange(actualIndex)}
                 role="button"
                 tabIndex={0}
@@ -171,7 +217,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                   if (e.key === 'Enter' || e.key === ' ') onChange(actualIndex);
                 }}
               >
-                <div className="pb-[60%] md:pb-[75%]"></div>
+                <div className="pb-[75%]"></div>
                 {item.type === 'video' ? (
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -217,11 +263,8 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               </div>
             );
           })}
-
-          {/* (Extra items removed here; handled inside modal) */}
         </div>
-
-        {/* Modal removed - navigation to dedicated page */}
+        {/* (Extra items removed here; handled inside modal) */}
       </div>
     </section>
   );
