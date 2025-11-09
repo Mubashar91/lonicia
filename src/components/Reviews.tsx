@@ -9,6 +9,7 @@ const Reviews = () => {
   const [modalReview, setModalReview] = useState<any>(null);
   const videoEls = useRef<Array<HTMLVideoElement | null>>([]);
   const [playingMap, setPlayingMap] = useState<Record<number, boolean>>({});
+  const [videoInView, setVideoInView] = useState<Record<number, boolean>>({});
 
   const preview = (text: string) =>
     text.length > 130
@@ -44,6 +45,31 @@ const Reviews = () => {
       document.body.style.overflow = '';
     }
   }, [modalReview]);
+
+  // Defer video loading until card is in view
+  useEffect(() => {
+    const container = videoRef.current;
+    if (!container) return;
+    const cards = Array.from(container.querySelectorAll<HTMLElement>('[data-vid-index]'));
+    if (cards.length === 0) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        setVideoInView((prev) => {
+          const next = { ...prev };
+          entries.forEach((entry) => {
+            const idx = Number((entry.target as HTMLElement).dataset.vidIndex);
+            if (!Number.isNaN(idx)) next[idx] = entry.isIntersecting;
+          });
+          return next;
+        });
+      },
+      { root: container, threshold: 0.4 }
+    );
+
+    cards.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
 
   return (
     <>
@@ -90,6 +116,7 @@ const Reviews = () => {
               <div
                 key={i}
                 data-card
+                data-vid-index={i}
                 className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
@@ -100,6 +127,7 @@ const Reviews = () => {
                       muted
                       loop
                       playsInline
+                      preload={videoInView[i] ? 'auto' : 'metadata'}
                       className="w-full h-96 md:h-[520px] object-cover"
                       onPlay={() => setPlayingMap((p) => ({ ...p, [i]: true }))}
                       onPause={() => setPlayingMap((p) => ({ ...p, [i]: false }))}
