@@ -95,7 +95,7 @@ const Reviews = () => {
                   <div className="relative">
                     <video
                       ref={(el) => (videoEls.current[i] = el)}
-                      src={src}
+                      src={encodeURI(src)}
                       muted
                       loop
                       playsInline
