@@ -35,13 +35,13 @@ const Services = () => {
       <section className="bg-black text-white pt-0 pb-20 md:pb-28">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Section Label */}
-          <p data-reveal data-delay="0s" className="text-center text-primary-gold font-poppins text-[16px] uppercase tracking-wide mb-6">
+          <p data-reveal data-delay="0s" className="text-left md:text-center text-primary-gold font-poppins text-[16px] uppercase tracking-wide mb-6">
             Services
           </p>
           
           {/* Main Heading */}
           <h2 data-reveal data-delay=".06s"
-            className="font-poppins font-medium text-[24px] md:text-[48px] lg:text-[59px] leading-tight text-center text-primary-gold mb-16 uppercase max-w-[1200px] mx-auto"
+            className="font-poppins font-medium text-[20px] sm:text-[28px] md:text-[48px] lg:text-[59px] leading-tight text-left md:text-center text-primary-gold mb-16 uppercase max-w-[1200px] mx-0 md:mx-auto"
             style={{ letterSpacing: '0%' }}
           >
             FROM NAILS TO SKINCARE, WE MAKE YOU GLOW INSIDE AND OUT.
