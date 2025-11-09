@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
 import { manicureDetails, manicureGallery, lashDetails, lashGallery, exploreServicesDefault } from '../data/services';
@@ -46,7 +46,7 @@ const ServicesDetails = () => {
                   }}
                 >
                   {/* Service Image */}
-                  <a href={href} className="w-full h-[360px] md:h-[420px] overflow-hidden rounded-[20px] block">
+                  <Link to={href} className="w-full h-[360px] md:h-[420px] overflow-hidden rounded-[20px] block">
                     <img 
                       src={service.url} 
                       alt={service.title} 
@@ -59,17 +59,17 @@ const ServicesDetails = () => {
                       }}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                     />
-                  </a>
+                  </Link>
                   
                   {/* Service Info */}
                   <div className="flex flex-col gap-2 px-2">
                     <h3 className="font-poppins text-[18px] md:text-[20px] font-semibold text-white uppercase tracking-wide">
                       {service.title}
                     </h3>
-                    <p className="text-[13px] md:text-[14px] text-gray-400 font-poppins mb-2">{service.tag}</p>
-                    <a href={href} className="bg-primary-gold text-black text-[13px] md:text-[14px] font-bold px-5 md:px-6 py-2.5 md:py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full text-center">
+                    <p className="text:[13px] md:text-[14px] text-gray-400 font-poppins mb-2">{service.tag}</p>
+                    <Link to={href} className="bg-primary-gold text-black text-[13px] md:text-[14px] font-bold px-5 md:px-6 py-2.5 md:py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full text-center">
                       LEARN MORE
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );
@@ -78,12 +78,12 @@ const ServicesDetails = () => {
 
           {/* View More Button */}
           <div className="flex justify-center mt-6 md:mt-8">
-            <a
-              href="/services"
+            <Link
+              to="/services"
               className="bg-primary-gold text-black px-8 md:px-12 py-3 md:py-4 rounded-lg font-bold hover:bg-opacity-90 transition uppercase tracking-wide text-[13px] md:text-[14px]"
             >
               VIEW MORE
-            </a>
+            </Link>
           </div>
         </div>
       </section>
