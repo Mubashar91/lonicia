@@ -131,7 +131,7 @@ const Reviews = () => {
                 key={i}
                 data-card
                 data-vid-index={i}
-                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                className="snap-center shrink-0 w-[calc(100vw-32px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                   <div className="relative">
@@ -202,7 +202,7 @@ const Reviews = () => {
               <div
                 key={t.id}
                 data-card
-                className="snap-center shrink-0 w-[calc(100vw-48px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
+                className="snap-center shrink-0 w-[calc(100vw-32px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
               >
                 {/* SAME HEIGHT CARD */}
                 <div

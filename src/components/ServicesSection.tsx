@@ -11,7 +11,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
         
         {/* Main Heading */}
         <h2 
-          className="typo-section-heading text-primary-gold mb-16 max-w-[1200px] md:mx-auto mx-0 text-left md:text-center text-2xl sm:text-4xl md:text-5xl leading-tight"
+          className="typo-section-heading text-primary-gold mb-16 max-w-[1200px] mx-0 text-left text-xl sm:text-3xl md:text-5xl leading-tight"
         >
           <span className="block">FROM NAILS TO SKINCARE,</span>
           <span className="block mt-2 md:mt-0">WE MAKE YOU GLOW INSIDE AND OUT.</span>
