@@ -2,6 +2,7 @@ import React from 'react';
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   placeholderSrc?: string;
+  shouldLoad?: boolean;
 };
 
 const TinyPlaceholder =
@@ -12,6 +13,7 @@ export default function LazyImage({
   placeholderSrc = TinyPlaceholder,
   className,
   onLoad,
+  shouldLoad = true,
   ...rest
 }: Props) {
   const imgRef = React.useRef<HTMLImageElement | null>(null);
@@ -21,8 +23,9 @@ export default function LazyImage({
     const el = imgRef.current;
     if (!el) return;
 
+    if (!shouldLoad) return;
+
     if ('loading' in HTMLImageElement.prototype) {
-      // Native lazy loading supported; set src directly
       el.src = String(src || '');
       return;
     }
@@ -41,7 +44,7 @@ export default function LazyImage({
 
     io.observe(el);
     return () => io.disconnect();
-  }, [src]);
+  }, [src, shouldLoad]);
 
   return (
     <img

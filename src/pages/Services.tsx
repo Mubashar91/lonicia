@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import LazyImage from '../components/LazyImage';
 
 const Services = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [nextToLoad, setNextToLoad] = useState(0);
+
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]'));
     if (els.length === 0) return;
@@ -30,6 +33,13 @@ const Services = () => {
 
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const apply = () => setIsMobile(window.innerWidth < 768);
+    apply();
+    window.addEventListener('resize', apply);
+    return () => window.removeEventListener('resize', apply);
   }, []);
   return (
     <div className="min-h-screen bg-black">
@@ -139,9 +149,15 @@ const Services = () => {
                     width={800}
                     height={600}
                     referrerPolicy="no-referrer"
+                    shouldLoad={!isMobile || idx <= nextToLoad}
                     onError={(e) => {
                       const target = e.currentTarget as HTMLImageElement;
                       target.src = '/placeholder.jpg';
+                    }}
+                    onLoad={() => {
+                      if (isMobile) {
+                        setNextToLoad((n) => (idx === n ? n + 1 : n));
+                      }
                     }}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
