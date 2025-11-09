@@ -14,7 +14,6 @@ interface ServiceGalleryProps {
 const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onChange }) => {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const [showAll, setShowAll] = React.useState(false);
 
   const pauseOthers = (el: HTMLVideoElement) => {
     const container = scrollContainerRef.current;
