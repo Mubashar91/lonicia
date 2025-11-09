@@ -71,6 +71,20 @@ const Reviews = () => {
     return () => io.disconnect();
   }, []);
 
+  // Ensure only visible videos play; pause others
+  useEffect(() => {
+    videoEls.current.forEach((v, i) => {
+      if (!v) return;
+      if (videoInView[i]) {
+        try { v.play(); } catch {}
+      } else {
+        if (!v.paused) {
+          try { v.pause(); } catch {}
+        }
+      }
+    });
+  }, [videoInView]);
+
   return (
     <>
     <section className="py-16 bg-black text-white">
@@ -127,6 +141,7 @@ const Reviews = () => {
                       muted
                       loop
                       playsInline
+                      autoPlay={!!videoInView[i]}
                       preload={videoInView[i] ? 'auto' : 'metadata'}
                       className="w-full h-96 md:h-[520px] object-cover"
                       onPlay={() => setPlayingMap((p) => ({ ...p, [i]: true }))}
