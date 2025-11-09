@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import LazyImage from '../components/LazyImage';
 
 const Services = () => {
   useEffect(() => {
@@ -128,9 +129,9 @@ const Services = () => {
               >
                 {/* Service Image */}
                 <Link to={href} className="w-full h-[260px] sm:h-[340px] md:h-[420px] overflow-hidden rounded-[20px] block">
-                  <img 
-                    src={encodeURI(card.url)} 
-                    alt={card.title} 
+                  <LazyImage
+                    src={encodeURI(card.url)}
+                    alt={card.title}
                     loading="lazy"
                     decoding="async"
                     fetchPriority="low"
@@ -142,7 +143,7 @@ const Services = () => {
                       const target = e.currentTarget as HTMLImageElement;
                       target.src = '/placeholder.jpg';
                     }}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </Link>
                 

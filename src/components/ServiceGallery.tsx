@@ -92,17 +92,18 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               {item.type === 'video' ? (
                 <video
                   className="absolute inset-0 w-full h-full object-cover"
-                  src={item.src}
-                  poster={(item as Extract<GalleryItem, { type: 'video' }>).poster}
+                  src={encodeURI(item.src)}
+                  poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                   muted
                   loop
                   autoPlay
                   playsInline
+                  preload="auto"
                   onPlay={(e) => pauseOthers(e.currentTarget)}
                 />
               ) : (
                 <img
-                  src={item.src}
+                  src={encodeURI(item.src)}
                   alt="Service work"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
@@ -132,17 +133,18 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                 {item.type === 'video' ? (
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
-                    src={item.src}
-                    poster={(item as Extract<GalleryItem, { type: 'video' }>).poster}
+                    src={encodeURI(item.src)}
+                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                     muted
                     loop
                     autoPlay={activeIndex === actualIndex}
                     playsInline
+                    preload={activeIndex === actualIndex ? 'auto' : 'metadata'}
                     onPlay={(e) => pauseOthers(e.currentTarget)}
                   />
                 ) : (
                   <img
-                    src={item.src}
+                    src={encodeURI(item.src)}
                     alt="Service work"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"
@@ -173,17 +175,18 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                 {item.type === 'video' ? (
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
-                    src={item.src}
-                    poster={(item as Extract<GalleryItem, { type: 'video' }>).poster}
+                    src={encodeURI(item.src)}
+                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                     muted
                     loop
                     autoPlay={activeIndex === actualIndex}
                     playsInline
+                    preload={activeIndex === actualIndex ? 'auto' : 'metadata'}
                     onPlay={(e) => pauseOthers(e.currentTarget)}
                   />
                 ) : (
                   <img
-                    src={item.src}
+                    src={encodeURI(item.src)}
                     alt="Service work"
                     className="absolute inset-0 w-full h-full object-cover"
                     loading="lazy"

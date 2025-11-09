@@ -77,7 +77,8 @@ const HeroSection = () => {
                   left: '164px',
                   zIndex: 1,
                 }}
-                loading="eager"
+                loading="lazy"
+                decoding="async"
               />
 
               {/* YELLOW ARCH (bottom) – your yelow.png */}
@@ -94,7 +95,8 @@ const HeroSection = () => {
                   top: '290px',
                   left: '360px'
                 }}
-                loading="eager"
+                loading="lazy"
+                decoding="async"
               />
 
               {/* FLOWER – your Group.png */}
@@ -109,7 +111,8 @@ const HeroSection = () => {
                   right: '4px',
                   zIndex: 3,
                 }}
-                loading="eager"
+                loading="lazy"
+                decoding="async"
               />
 
               {/* SCROLL INDICATOR */}
