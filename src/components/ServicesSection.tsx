@@ -127,12 +127,12 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
 
         {/* View More Button */}
         <div className="flex justify-center mt-16">
-          <Link
-            to="/services"
-            className="bg-primary-gold text-black px-12 py-4 rounded-lg font-bold hover:bg-opacity-90 transition uppercase tracking-wide text-[14px] transform duration-200 hover:scale-[1.02]"
-          >
-            VIEW MORE
-          </Link>
+            <Link
+                       to="/services"
+                       className="bg-primary-gold text-black px-8 md:px-12 py-3 md:py-4 rounded-lg font-bold hover:bg-opacity-90 transition uppercase tracking-wide text-[13px] md:text-[14px]"
+                     >
+                       VIEW MORE
+                     </Link>
         </div>
       </div>
     </section>
