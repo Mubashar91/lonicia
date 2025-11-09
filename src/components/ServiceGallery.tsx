@@ -98,7 +98,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                   loop
                   autoPlay
                   playsInline
-                  preload="auto"
                   onPlay={(e) => pauseOthers(e.currentTarget)}
                 />
               ) : (
@@ -139,7 +138,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                     loop
                     autoPlay={activeIndex === actualIndex}
                     playsInline
-                    preload={activeIndex === actualIndex ? 'auto' : 'metadata'}
                     onPlay={(e) => pauseOthers(e.currentTarget)}
                   />
                 ) : (
@@ -181,7 +179,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                     loop
                     autoPlay={activeIndex === actualIndex}
                     playsInline
-                    preload={activeIndex === actualIndex ? 'auto' : 'metadata'}
                     onPlay={(e) => pauseOthers(e.currentTarget)}
                   />
                 ) : (

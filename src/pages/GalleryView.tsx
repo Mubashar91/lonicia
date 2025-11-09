@@ -97,12 +97,12 @@ const GalleryView: React.FC = () => {
   }, [index, items.length]);
 
   const MediaContainer: React.FC<{ item: GalleryItem; index: number }> = ({ item, index }) => (
-    <div className="snap-center shrink-0 w-screen flex justify-center items-center p-4">
-      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-full max-w-[400px] h-[80vh] max-h-[500px] flex items-center justify-center">
+    <div className="snap-center shrink-0 w-screen flex justify-center items-center p-2 md:p-4">
+      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-full max-w-[420px] h-[70vh] md:h-[80vh] max-h-[460px] md:max-h-[500px] flex items-center justify-center">
         {item.type === 'video' ? (
           <video
-            src={item.src}
-            poster={item.poster}
+            src={encodeURI(item.src)}
+            poster={encodeURI(item.poster)}
             controls
             className="w-full h-full object-contain"
             onPlay={(e) => pauseOthers(e.currentTarget)}
@@ -111,7 +111,7 @@ const GalleryView: React.FC = () => {
           />
         ) : (
           <img
-            src={item.src}
+            src={encodeURI(item.src)}
             alt={`Media ${index + 1}`}
             className="w-full h-full object-contain"
             loading="lazy"
@@ -144,27 +144,27 @@ const GalleryView: React.FC = () => {
   return (
     <section className="min-h-[90vh] bg-black text-white py-8">
       <div className="container mx-auto px-4 md:px-6 lg:px-12">
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-4">
-            <h1 className="text-primary-gold text-2xl md:text-3xl font-semibold">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4 md:mb-6">
+          <div className="flex items-center gap-2 md:gap-4">
+            <h1 className="text-primary-gold text-xl sm:text-2xl md:text-3xl font-semibold">
               All Media
             </h1>
-            <span className="text-base text-gray-400">
+            <span className="text-sm md:text-base text-gray-400">
               {index + 1} of {items.length}
             </span>
           </div>
           
           {/* Next/Previous buttons moved to the right side */}
-          <div className="flex gap-3">
+          <div className="flex gap-2 md:gap-3">
             <button
               aria-label="Previous"
               onClick={() => stepTo(-1)}
               disabled={items.length <= 1}
-              className="w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed text-white border border-white/20 flex items-center justify-center transition-all duration-200"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/15 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed text-white border border-white/20 flex items-center justify-center transition-all duration-200"
             >
               <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -177,11 +177,11 @@ const GalleryView: React.FC = () => {
               aria-label="Next"
               onClick={() => stepTo(1)}
               disabled={items.length <= 1}
-              className="w-12 h-12 rounded-full bg-white/15 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed text-white border border-white/20 flex items-center justify-center transition-all duration-200"
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/15 hover:bg-white/25 disabled:opacity-30 disabled:cursor-not-allowed text-white border border-white/20 flex items-center justify-center transition-all duration-200"
             >
               <svg
-                width="22"
-                height="22"
+                width="20"
+                height="20"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -192,7 +192,7 @@ const GalleryView: React.FC = () => {
             </button>
             <button
               onClick={() => navigate(-1)}
-              className="h-12 px-6 rounded-full bg-[#D4AF37] text-black font-semibold border border-black/20 hover:brightness-95 transition-all duration-200 text-base"
+              className="h-10 md:h-12 px-4 md:px-6 rounded-full bg-[#D4AF37] text-black font-semibold border border-black/20 hover:brightness-95 transition-all duration-200 text-sm md:text-base"
             >
               Close
             </button>

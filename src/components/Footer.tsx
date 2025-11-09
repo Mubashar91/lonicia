@@ -1,20 +1,12 @@
 const Footer = () => {
   return (
     <footer className="bg-primary-dark text-primary-gold">
-      <div className="container mx-auto px-[30px] lg:px-[90px] py-16">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12 mb-4">
+      <div className="container mx-auto px-4 md:px-6 lg:px-[90px] py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12 mb-6">
           {/* Logo and Contact */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
-            <div className="">
-  <img
-    src="logo.jpeg"
-    alt="Logo"
-    className="size-20"          // 20 × 20 px (Tailwind 3+)
-    // className="h-5 w-5"     // alternative
-  />
-</div>
-             
+              <img src="/logo.jpeg" alt="MK Nails & Beauty" className="h-10 w-auto md:h-14" />
             </div>
 
             {/* Contact Information */}
@@ -91,28 +83,28 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="hidden md:block">
-            <h4 className="text-primary-gold font-semibold mb-6 text-[16px] uppercase tracking-wide">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><a href="/" className="text-primary-gold hover:text-primary-gold transition text-sm">Home</a></li>
-              <li><a href="/price-list" className="text-primary-gold hover:text-primary-gold transition text-sm">Price List</a></li>
-              <li><a href="/services" className="text-primary-gold hover:text-primary-gold transition text-sm">Services</a></li>
-              <li><a href="/shops" className="text-primary-gold hover:text-primary-gold transition text-sm">Shops</a></li>
-              <li><a href="/about" className="text-primary-gold hover:text-primary-gold transition text-sm">About Us</a></li>
-              <li><a href="/contact" className="text-primary-gold hover:text-primary-gold transition text-sm">Contact Us</a></li>
+          <div>
+            <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Quick Links</h4>
+            <ul className="grid grid-cols-2 gap-y-2 md:block md:space-y-3 text-sm">
+              <li><a href="/" className="hover:text-primary-gold transition">Home</a></li>
+              <li><a href="/price-list" className="hover:text-primary-gold transition">Price List</a></li>
+              <li><a href="/services" className="hover:text-primary-gold transition">Services</a></li>
+              <li><a href="/shops" className="hover:text-primary-gold transition">Shops</a></li>
+              <li><a href="/about" className="hover:text-primary-gold transition">About Us</a></li>
+              <li><a href="/contact" className="hover:text-primary-gold transition">Contact Us</a></li>
             </ul>
           </div>
 
           {/* Subscribe */}
           <div>
-            <h4 className="text-primary-gold font-semibold mb-6 text-[16px] uppercase tracking-wide">Subscribe</h4>
-            <form className="flex w-full max-w-sm">
+            <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Subscribe</h4>
+            <form className="flex flex-col sm:flex-row w-full max-w-sm gap-2 sm:gap-0">
               <input
                 type="email"
                 placeholder="Get product updates"
-                className="flex-1 px-4 py-3 rounded-l-md bg-white text-primary-dark text-sm focus:outline-none placeholder:text-gray-500"
+                className="flex-1 px-4 py-3 rounded-md sm:rounded-l-md sm:rounded-r-none bg-white text-primary-dark text-sm focus:outline-none placeholder:text-gray-500"
               />
-              <button type="submit" className="bg-gradient-to-b from-yellow-400 to-amber-500 text-primary-dark px-4 py-3 rounded-r-md border border-black/20 hover:brightness-105 transition grid place-items-center">
+              <button type="submit" className="bg-gradient-to-b from-yellow-400 to-amber-500 text-primary-dark px-4 py-3 rounded-md sm:rounded-r-md sm:rounded-l-none border border-black/20 hover:brightness-105 transition grid place-items-center">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -124,14 +116,14 @@ const Footer = () => {
         {/* Opening Hours */}
         <div className="mb-10">
           <h4 className="text-primary-gold font-bold mb-4 text-2xl md:text-3xl tracking-wide">Opening hours</h4>
-          <div className=" md:grid-cols-2 gap-3 text-primary-gold text-sm">
+          <div className="grid grid-cols-1 gap-2 text-primary-gold text-sm">
             <p>Mon-Sat 10:00am-19:00pm Larnaca</p>
             <p>Mon-Sat 09:00am-19:00pm Nicosia</p>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-primary-gold/20 pt-8 text-center">
+        <div className="border-top border-primary-gold/20 pt-6 md:pt-8 text-center">
           <p className="text-primary-gold text-xs">
             © 2025. All rights reserved
           </p>

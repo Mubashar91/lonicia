@@ -9,15 +9,15 @@ const HeroSection = () => {
 
             {/* LEFT: TEXT & BUTTONS */}
             <div className="z-10 flex flex-col justify-start md:justify-center h-auto lg:h-auto pl-4 lg:pl-[70px]">
-              <h1 className="mt-0 md:mt-10 lg:mt-[120px] mb-6 md:mb-6 text-center lg:text-left md:whitespace-nowrap">
+              <h1 className="mt-0 md:mt-[60px] lg:mt-[120px] mb-6 md:mb-10 text-center lg:text-left">
                 <div
-                  className="text-5xl md:text-6xl lg:text-8xl mb-3 md:mb-0 md:inline-block md:mr-3 text-white"
+                  className="text-5xl md:text-7xl lg:text-8xl mb-3 text-white"
                   style={{ fontFamily: "'Dancing Script', cursive" }}
                 >
                   Perfect <span className="italic text-yellow-500">nails</span>
                 </div>
                 <div
-                  className="text-5xl md:text-6xl lg:text-8xl md:inline-block"
+                  className="text-5xl md:text-7xl lg:text-8xl"
                   style={{ fontFamily: "'Dancing Script', cursive" }}
                 >
                   <span className="italic text-yellow-500">Timeless </span>
@@ -40,12 +40,12 @@ const HeroSection = () => {
                 detail is perfected to make you feel confident, elegant, and effortlessly beautiful.
               </p>
 
-              <div className="flex flex-row flex-nowrap justify-center lg:justify-start gap-1 sm:gap-4">
+              <div className="flex flex-row flex-wrap justify-center lg:justify-start gap-3 sm:gap-4">
                 {['LARNACA', 'NICOSIA'].map((city) => (
                   <a
                     key={city}
                     href="/contact"
-                    className={`rounded-md border border-black/20 bg-gradient-to-b from-yellow-400 to-amber-500 px-2 py-2 text-[11px] tracking-normal font-bold uppercase text-black shadow-sm transition duration-300 whitespace-nowrap sm:px-8 sm:py-4 sm:text-base sm:tracking-wide transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] hover:shadow-md hover:from-amber-400 hover:to-yellow-500 hover:saturate-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black`}
+                    className={`rounded-md border border-black/20 bg-gradient-to-b from-yellow-400 to-amber-500 px-4 py-3 text-sm tracking-normal font-bold uppercase text-black shadow-sm transition duration-300 whitespace-nowrap sm:px-8 sm:py-4 sm:text-base sm:tracking-wide transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] hover:shadow-md hover:from-amber-400 hover:to-yellow-500 hover:saturate-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black`}
                   >
                     BOOK NOW {city}
                   </a>
@@ -63,8 +63,6 @@ const HeroSection = () => {
                 className="absolute inset-0 w-full h-full object-cover object-top"
                 style={{ zIndex: 2 }}
                 loading="eager"
-                fetchPriority="high"
-                decoding="async"
               />
 
               {/* CREAM ARCH (top) – your cremic.png */}
@@ -79,8 +77,7 @@ const HeroSection = () => {
                   left: '164px',
                   zIndex: 1,
                 }}
-                loading="lazy"
-                decoding="async"
+                loading="eager"
               />
 
               {/* YELLOW ARCH (bottom) – your yelow.png */}
@@ -97,8 +94,7 @@ const HeroSection = () => {
                   top: '290px',
                   left: '360px'
                 }}
-                loading="lazy"
-                decoding="async"
+                loading="eager"
               />
 
               {/* FLOWER – your Group.png */}
@@ -113,8 +109,7 @@ const HeroSection = () => {
                   right: '4px',
                   zIndex: 3,
                 }}
-                loading="lazy"
-                decoding="async"
+                loading="eager"
               />
 
               {/* SCROLL INDICATOR */}
