@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 type Props = { noTopPadding?: boolean; padXClass?: string }
 
 const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: Props) => {
@@ -80,7 +81,14 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             //   tag: 'Women/Mens',
             //   url: '/laser.jpg',
             // },
-          ].map((card, idx) => (
+          ].map((card, idx) => {
+            const titleUpper = card.title.trim().toUpperCase();
+            const href = titleUpper.includes('LASH')
+              ? '/services/lash-extensions'
+              : titleUpper.includes('MANICURE')
+              ? '/services/manicure'
+              : '/services';
+            return (
             <div 
               key={idx} 
               data-reveal
@@ -92,20 +100,16 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               }}
             >
               {/* Service Image */}
-              <div className="w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-[20px]">
+              <Link to={href} className="w-full h-[320px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-[20px] block">
                 <img
                   src={card.url}
                   alt={card.title}
                   loading="lazy"
                   referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    const target = e.currentTarget as HTMLImageElement;
-                    // Fallback to a stable placeholder per card index
-                    // target.src = `https://picsum.photos/seed/service-${idx}/800/600`;
-                  }}
+                  onError={() => {}}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-              </div>
+              </Link>
               
               {/* Service Info */}
               <div className="flex flex-col gap-2 px-2">
@@ -113,12 +117,12 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
                   {card.title}
                 </h3>
                 <p className="text-[14px] text-gray-400 font-poppins mb-2">{card.tag}</p>
-                <button className="bg-primary-gold text-black text-[14px] font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full transform duration-200 hover:scale-[1.02]">
+                <Link to={href} className="bg-primary-gold text-black text-[14px] font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full text-center transform duration-200 hover:scale-[1.02]">
                   LEARN MORE
-                </button>
+                </Link>
               </div>
             </div>
-          ))}
+          );})}
         </div>
 
         {/* View More Button */}
