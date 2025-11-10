@@ -358,7 +358,7 @@ export const permanentMakeupDetails: ServiceDetails = {
   ],
   closingText:
     "Invest in yourself with permanent makeup — wake up beautiful and confident every single day.",
-  mainImage: '/permanent.jpeg',
+  mainImage: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg',
   pricing: [
     { name: 'Brows (Microblading)', price: '€150' },
     { name: 'Brows (Powder/Ombre)', price: '€150' },
@@ -376,14 +376,16 @@ export const permanentMakeupDetails: ServiceDetails = {
 };
 
 export const permanentMakeupGallery: readonly GalleryItem[] = [
-  { type: 'image', src: '/permanent.jpeg' },
-  { type: 'image', src: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg' },
-  { type: 'image', src: '/makeup/910d08ea-a0b1-4d07-aed1-0a285a604bf7.jpeg' },
-  { type: 'image', src: '/makeup/9ac263ae-5408-44bb-a381-870e78503129.jpeg' },
-  { type: 'image', src: '/makeup/c6839767-1a07-4ee0-b9a7-1aa69b08906b.jpeg' },
-  { type: 'image', src: '/makeup/dcc1f264-7d43-4006-be82-2c2c768216d5.jpeg' },
-  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6.jpeg' },
-  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6 (1).jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.03 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.27.28 AM.jpeg' },
+  { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.59 AM.jpeg' },
+  { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.30.13 AM.jpeg' },
+  { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.31.11 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.14 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.22 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.27.16 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.28.47 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
 ] as const;
 
 // BODY SLIM TREATMENT data
