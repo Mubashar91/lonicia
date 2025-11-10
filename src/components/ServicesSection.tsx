@@ -36,7 +36,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             {
               title: 'PEDICURE',
               tag: 'Women/Mens',
-              url: '/pedicure.jpg',
+              url: '/pedicure/pedicuremian.jpeg',
               price: 'From €20',
             },
             {
@@ -93,6 +93,8 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               ? '/services/lash-extensions'
               : titleUpper.includes('MANICURE')
               ? '/services/manicure'
+              : titleUpper.includes('PEDICURE')
+              ? '/services/pedicure'
               : '/services';
             return (
             <div 

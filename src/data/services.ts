@@ -90,7 +90,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'PEDICURE',
     tag: 'Women/Mens',
-    url: 'https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=800&auto=format&fit=crop',
+    url: '/pedicure/pedicuremian.jpeg',
   },
 ];
 
@@ -141,4 +141,49 @@ export const lashGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/lash/lashnine.jpeg' },
   { type: 'image', src: '/lash/lasttwo.jpeg' },
   { type: 'image', src: '/lash/lastsix.jpeg' },
+] as const;
+
+// PEDICURE data
+export const pedicureDetails: ServiceDetails = {
+  category: 'PEDICURE',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Pamper your feet with our luxurious pedicure services.\n\nAt MK Nails & Beauty, our Pedicure service goes beyond basic nail care — it's a complete foot rejuvenation experience. From gentle exfoliation to soothing massage and flawless polish application, we ensure your feet look beautiful and feel refreshed.",
+  howItWorks:
+    "Our pedicure begins with a relaxing foot soak to soften the skin, followed by nail trimming, shaping, and cuticle care. We then exfoliate to remove dead skin and calluses, revealing smooth, healthy feet. A therapeutic foot massage improves circulation and relaxation. Finally, we apply your choice of polish for a perfect finish.",
+  whatToExpect: [
+    'Perfectly shaped and polished toenails.',
+    'Soft, smooth, and refreshed feet.',
+    'Removal of calluses and dead skin.',
+    'Relaxing foot massage and hydration.',
+    'Professional care in a hygienic environment.',
+  ],
+  closingText:
+    "Step out with confidence — because beautiful, healthy feet deserve the best care.",
+  mainImage: '/pedicure/pedicuremian.jpeg',
+  pricing: [
+    { name: 'Pedicure toes', price: '€20' },
+    { name: 'Pedicure toes + nail polish', price: '€25' },
+    { name: 'Pedicure toes + soft gel', price: '€30' },
+    { name: 'Pedicure full', price: '€35' },
+    { name: 'Pedicure full + nail polish', price: '€40' },
+    { name: 'Pedicure full + soft gel', price: '€45' },
+    { name: 'Japanese pedicure full', price: '€40' },
+    { name: 'Pedicure for man', price: '€45' },
+    { name: 'Paraffin Therapy feet', price: '€10' },
+    { name: 'French / design / powder', price: '€10' },
+    { name: 'Gel removal', price: '€5/10' },
+  ],
+};
+
+export const pedicureGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/pedicure/pedicuremian.jpeg' },
+  { type: 'image', src: '/pedicure/pedi1.jpeg' },
+  { type: 'image', src: '/pedicure/102ae395-dc87-4ae2-b17b-c1a1e100e466.jpeg' },
+  { type: 'image', src: '/pedicure/69eb3575-c6c4-43a9-90a7-489236020709.jpeg' },
+  { type: 'image', src: '/pedicure/69f64207-9f7a-4c6d-885d-e2dcf6bbb8b1.jpeg' },
+  { type: 'image', src: '/pedicure/a751e6a6-69cd-4643-8bbc-539850dbd14b.jpeg' },
+  { type: 'image', src: '/pedicure/d71a39d6-e8a3-4a6a-90b4-ccd25da99112.jpeg' },
+  { type: 'image', src: '/pedicure/e90cb8ef-5eae-4dab-9611-dc37200d53b6.jpeg' },
+  { type: 'image', src: '/pedicure/fdc1954a-3be0-4d72-bc7a-64d7f5bb7609.jpeg' },
 ] as const;

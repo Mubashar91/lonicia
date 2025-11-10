@@ -2,18 +2,19 @@ import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
-import { manicureDetails, manicureGallery, lashDetails, lashGallery, exploreServicesDefault } from '../data/services';
+import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, exploreServicesDefault } from '../data/services';
 
 const ServicesDetails = () => {
   const location = useLocation();
   const path = location.pathname.toLowerCase();
   const isLash = path.includes('lash-extensions');
+  const isPedicure = path.includes('pedicure');
 
-  const serviceDetails = isLash ? lashDetails : manicureDetails;
+  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : manicureDetails;
 
   const exploreServices = exploreServicesDefault;
 
-  const galleryItems = isLash ? lashGallery : manicureGallery;
+  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : manicureGallery;
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -35,7 +36,7 @@ const ServicesDetails = () => {
           <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto mb-8 md:mb-12 overflow-x-auto snap-x snap-mandatory scroll-smooth md:overflow-visible [scrollbar-width:none] [msOverflowStyle:none] [&::-webkit-scrollbar]:hidden">
             {exploreServices.map((service, idx) => {
               const title = service.title.trim().toUpperCase();
-              const href = title === 'MANICURE' ? '/services/manicure' : title === 'LASH EXTENSIONS' ? '/services/lash-extensions' : '/404';
+              const href = title === 'MANICURE' ? '/services/manicure' : title === 'LASH EXTENSIONS' ? '/services/lash-extensions' : title === 'PEDICURE' ? '/services/pedicure' : '/404';
               return (
                 <div 
                   key={idx} 
