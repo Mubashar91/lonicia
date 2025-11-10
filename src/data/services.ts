@@ -4,6 +4,11 @@ export type GalleryItem =
   | { type: 'video'; src: string; poster: string }
   | { type: 'image'; src: string };
 
+export interface PricingItem {
+  name: string;
+  price: string;
+}
+
 export interface ServiceDetails {
   category: string;
   aboutTitle: string;
@@ -12,6 +17,7 @@ export interface ServiceDetails {
   whatToExpect: string[];
   closingText: string;
   mainImage: string;
+  pricing?: PricingItem[];
 }
 
 export interface ExploreServiceCard {
@@ -38,6 +44,22 @@ export const manicureDetails: ServiceDetails = {
     "Treat yourself to the perfect balance of beauty and relaxation — because your hands deserve to look as good as you feel.",
   mainImage:
     'https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&h=1200&fit=crop',
+  pricing: [
+    { name: 'Manicure', price: '€20' },
+    { name: 'Manicure + nail polish', price: '€25' },
+    { name: 'Manicure + soft gel', price: '€30' },
+    { name: 'Manicure + hard gel (2-3)', price: '€35' },
+    { name: 'Manicure + hard gel (4-5)', price: '€40' },
+    { name: 'Nail extension (2-3)', price: '€55' },
+    { name: 'Nail extension (4-5)', price: '€65' },
+    { name: 'Japanese manicure', price: '€30' },
+    { name: 'Manicure for man', price: '€25' },
+    { name: 'Paraffin Therapy hands', price: '€10' },
+    { name: 'French / powder / design TWO nails', price: '€10' },
+    { name: 'Gel removal', price: '€5/10' },
+    { name: 'Hard gel / extension removal', price: '€10' },
+    { name: 'Repair ONE nail', price: '€5' },
+  ],
 };
 
 export const manicureGallery: readonly GalleryItem[] = [
@@ -89,6 +111,21 @@ export const lashDetails: ServiceDetails = {
   closingText:
     "Wake up ready with effortless, camera‑ready lashes that elevate your everyday look.",
   mainImage: '/lash/lashone.jpeg',
+  pricing: [
+    { name: 'Classic (First time)', price: '€50' },
+    { name: 'Classic (Infill)', price: '€40' },
+    { name: 'Hybrid (First time)', price: '€55' },
+    { name: 'Hybrid (Infill)', price: '€45' },
+    { name: 'Light Volume 2-3D (First time)', price: '€60' },
+    { name: 'Light Volume 2-3D (Infill)', price: '€50' },
+    { name: 'Mega Volume (First time)', price: '€65' },
+    { name: 'Mega Volume (Infill)', price: '€55' },
+    { name: 'Wispy (First time)', price: '€65' },
+    { name: 'Wispy (Infill)', price: '€55' },
+    { name: 'Corner Lashes', price: '€40' },
+    { name: 'Lash Removal', price: '€15' },
+    { name: 'Colourful/Ombré', price: '€10' },
+  ],
 };
  
 export const lashGallery: readonly GalleryItem[] = [
