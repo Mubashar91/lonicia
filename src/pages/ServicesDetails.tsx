@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
-import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, exploreServicesDefault } from '../data/services';
+import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, exploreServicesDefault } from '../data/services';
 
 const ServicesDetails = () => {
   const location = useLocation();
@@ -10,12 +10,13 @@ const ServicesDetails = () => {
   const isLash = path.includes('lash-extensions');
   const isPedicure = path.includes('pedicure');
   const isLaser = path.includes('laser');
+  const isBrowsLashes = path.includes('brows-lashes');
 
-  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : manicureDetails;
+  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : manicureDetails;
 
   const exploreServices = exploreServicesDefault;
 
-  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : manicureGallery;
+  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : manicureGallery;
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 

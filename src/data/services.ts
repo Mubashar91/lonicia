@@ -244,3 +244,44 @@ export const laserGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/laser-hair-removel/ed31cdeb-f61b-4e20-8471-e1f303890634.jpeg' },
   { type: 'image', src: '/laser-hair-removel/fc52d219-0587-4e5b-ba2b-75fbe59bc797.jpeg' },
 ] as const;
+
+// BROWS/LASHES data
+export const browsLashesDetails: ServiceDetails = {
+  category: 'BROWS / LASHES',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Frame your face with perfectly shaped brows and stunning lashes.\n\nAt MK Nails & Beauty, we specialize in brow and lash treatments that enhance your natural beauty. From precise brow shaping and tinting to luxurious lash lifts and lamination, our expert technicians create customized looks that complement your features and lifestyle.",
+  howItWorks:
+    "Our brow services include professional shaping using tweezers or wax, followed by tinting to define and enhance. For lashes, we offer LVL lamination that lifts and curls your natural lashes, plus optional botox treatment for added nourishment. Each service is tailored to your desired look, whether natural or dramatic.",
+  whatToExpect: [
+    'Perfectly shaped and defined brows.',
+    'Long-lasting tint for fuller-looking brows.',
+    'Lifted, curled lashes without extensions.',
+    'Low-maintenance beauty that lasts weeks.',
+    'Professional consultation for your ideal look.',
+    'Safe, gentle treatments for sensitive eyes.',
+  ],
+  closingText:
+    "Wake up with effortlessly beautiful brows and lashes — because your eyes deserve to shine.",
+  mainImage: '/bowsone.jpeg',
+  pricing: [
+    { name: 'Brows shape (tweezers, wax)', price: '€15' },
+    { name: 'Brows shape + tinting', price: '€20' },
+    { name: 'Brows lamination', price: '€30' },
+    { name: 'Brows lamination + botox', price: '€35' },
+    { name: 'Brows lamination + botox shape, tinting', price: '€40' },
+    { name: 'Lash lift (LVL lamination)', price: '€35' },
+    { name: 'Lash lift + botox', price: '€40' },
+    { name: 'Lash lift + botox, tinting', price: '€45' },
+    { name: 'Lash tinting', price: '€15' },
+    { name: 'Combo LVL Brows & Lash', price: '€80' },
+    { name: 'Upper lip wax / tweezers', price: '€5' },
+  ],
+};
+
+export const browsLashesGallery: readonly GalleryItem[] = [
+  { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-10 at 11.56.18 PM.mp4', poster: '/bowsone.jpeg' },
+  { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-11 at 12.04.21 AM.mp4', poster: '/bowsone.jpeg' },
+  { type: 'image', src: '/lashesbowes/WhatsApp Image 2025-11-11 at 12.08.47 AM.jpeg' },
+  { type: 'image', src: '/bowsone.jpeg' },
+] as const;

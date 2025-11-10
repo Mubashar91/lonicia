@@ -89,8 +89,10 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             // },
           ].map((card, idx) => {
             const titleUpper = card.title.trim().toUpperCase();
-            const href = titleUpper.includes('LASH')
+            const href = titleUpper.includes('LASH EXTENSIONS')
               ? '/services/lash-extensions'
+              : titleUpper.includes('BROWS') || titleUpper.includes('LASHES')
+              ? '/services/brows-lashes'
               : titleUpper.includes('MANICURE')
               ? '/services/manicure'
               : titleUpper.includes('PEDICURE')

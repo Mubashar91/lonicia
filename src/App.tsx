@@ -26,6 +26,7 @@ function App() {
             <Route path="/services/pedicure" element={<ServicesDetails />} />
             <Route path="/services/lash-extensions" element={<ServicesDetails />} />
             <Route path="/services/laser-hair-removal" element={<ServicesDetails />} />
+            <Route path="/services/brows-lashes" element={<ServicesDetails />} />
             <Route path="/services-details" element={<ServicesDetails />} />
             <Route path="/gallery" element={<GalleryView />} />
             <Route path="/price-list" element={<PriceList />} />
