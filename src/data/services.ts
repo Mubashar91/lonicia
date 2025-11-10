@@ -187,3 +187,60 @@ export const pedicureGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/pedicure/e90cb8ef-5eae-4dab-9611-dc37200d53b6.jpeg' },
   { type: 'image', src: '/pedicure/fdc1954a-3be0-4d72-bc7a-64d7f5bb7609.jpeg' },
 ] as const;
+
+// LASER HAIR REMOVAL data
+export const laserDetails: ServiceDetails = {
+  category: 'LASER HAIR REMOVAL',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Experience smooth, hair-free skin with our advanced laser hair removal treatments.\n\nAt MK Nails & Beauty, we use state-of-the-art laser technology to provide safe, effective, and long-lasting hair removal for both men and women. Our certified technicians customize each treatment to your skin type and hair color, ensuring optimal results with minimal discomfort.",
+  howItWorks:
+    "Our laser hair removal process uses concentrated light beams that target hair follicles. The pigment in the follicles absorbs the light, which destroys the hair. A consultation determines your treatment plan based on your skin tone, hair type, and desired results. Multiple sessions are typically needed for best results, as hair grows in cycles.",
+  whatToExpect: [
+    'Permanent hair reduction with multiple sessions.',
+    'Safe for all skin types and tones.',
+    'Minimal discomfort with cooling technology.',
+    'Quick treatment times for most areas.',
+    'Smooth, hair-free skin that lasts.',
+    'Professional consultation and customized treatment plans.',
+  ],
+  closingText:
+    "Say goodbye to razors and waxing — enjoy the freedom of smooth, beautiful skin all year round.",
+  mainImage: '/laser.jpg',
+  pricing: [
+    { name: 'Full Legs (Women)', price: '€60' },
+    { name: 'Full Legs (Men)', price: '€70' },
+    { name: 'Lower Legs (Women)', price: '€40' },
+    { name: 'Lower Legs (Men)', price: '€50' },
+    { name: 'Back (Women)', price: '€40' },
+    { name: 'Back (Men)', price: '€60' },
+    { name: 'Chest (Men)', price: '€40' },
+    { name: 'Arms (Women)', price: '€30' },
+    { name: 'Arms (Men)', price: '€50' },
+    { name: 'Half Arms (Women)', price: '€25' },
+    { name: 'Half Arms (Men)', price: '€40' },
+    { name: 'Full Bikini (Brazilian)', price: '€40' },
+    { name: 'Bikini Line', price: '€30' },
+    { name: 'Armpits', price: '€30' },
+    { name: 'Glutes (Women)', price: '€25' },
+    { name: 'Glutes (Men)', price: '€40' },
+    { name: 'Face (Women)', price: '€25' },
+    { name: 'Face (Men)', price: '€30' },
+    { name: 'Small Area', price: '€10' },
+    { name: 'Full Body (Women)', price: '€120' },
+    { name: 'Full Body (Men)', price: '€140' },
+    { name: 'Abdominal (Men)', price: '€40' },
+  ],
+};
+
+export const laserGallery: readonly GalleryItem[] = [
+  { type: 'video', src: '/video/WhatsApp Video 2025-11-08 at 2.38.21 PM.mp4', poster: '/laser.jpg' },
+  { type: 'image', src: '/laser.jpg' },
+  { type: 'image', src: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/ac022cb6-9423-4434-a210-1f4ffe063fe4.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/b19d58d9-0679-4fed-8b36-2520f707cc3e.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/b5990988-f416-4748-aa48-fd13f73e7e21.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/bbf96be0-9db9-4382-874f-45979a6ba193.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/ed31cdeb-f61b-4e20-8471-e1f303890634.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/fc52d219-0587-4e5b-ba2b-75fbe59bc797.jpeg' },
+] as const;

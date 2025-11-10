@@ -95,6 +95,8 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               ? '/services/manicure'
               : titleUpper.includes('PEDICURE')
               ? '/services/pedicure'
+              : titleUpper.includes('LASER')
+              ? '/services/laser-hair-removal'
               : '/services';
             return (
             <div 
