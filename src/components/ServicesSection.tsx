@@ -48,7 +48,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             {
               title: 'PERMANENT MAKEUP',
               tag: 'Women',
-              url: '/permanent.jpeg',
+              url: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg',
               price: 'From €40',
             },
             {
