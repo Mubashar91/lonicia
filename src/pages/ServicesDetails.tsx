@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
-import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, exploreServicesDefault } from '../data/services';
+import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, makeupDetails, makeupGallery, permanentMakeupDetails, permanentMakeupGallery, bodySlimDetails, bodySlimGallery, hairDressingDetails, hairDressingGallery, exploreServicesDefault } from '../data/services';
 
 const ServicesDetails = () => {
   const location = useLocation();
@@ -11,12 +11,18 @@ const ServicesDetails = () => {
   const isPedicure = path.includes('pedicure');
   const isLaser = path.includes('laser');
   const isBrowsLashes = path.includes('brows-lashes');
+  const isMakeup = path.includes('makeup') && !path.includes('permanent');
+  const isPermanentMakeup = path.includes('permanent-makeup');
+  const isBodySlim = path.includes('body-slim');
+  const isHairDressing = path.includes('hair-dressing');
+  const isFacials = path.includes('facials');
+  const isAesthetics = path.includes('aesthetics');
 
-  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : manicureDetails;
+  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : isMakeup ? makeupDetails : isPermanentMakeup ? permanentMakeupDetails : isBodySlim ? bodySlimDetails : isHairDressing ? hairDressingDetails : manicureDetails;
 
   const exploreServices = exploreServicesDefault;
 
-  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : manicureGallery;
+  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : isMakeup ? makeupGallery : isPermanentMakeup ? permanentMakeupGallery : isBodySlim ? bodySlimGallery : isHairDressing ? hairDressingGallery : manicureGallery;
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -38,7 +44,7 @@ const ServicesDetails = () => {
           <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 max-w-[1200px] mx-auto mb-8 md:mb-12 overflow-x-auto snap-x snap-mandatory scroll-smooth md:overflow-visible [scrollbar-width:none] [msOverflowStyle:none] [&::-webkit-scrollbar]:hidden">
             {exploreServices.map((service, idx) => {
               const title = service.title.trim().toUpperCase();
-              const href = title === 'MANICURE' ? '/services/manicure' : title === 'LASH EXTENSIONS' ? '/services/lash-extensions' : title === 'PEDICURE' ? '/services/pedicure' : title.includes('LASER') ? '/services/laser-hair-removal' : '/404';
+              const href = title === 'MANICURE' ? '/services/manicure' : title === 'LASH EXTENSIONS' ? '/services/lash-extensions' : title === 'PEDICURE' ? '/services/pedicure' : title.includes('LASER') ? '/services/laser-hair-removal' : title === 'MAKEUP' ? '/services/makeup' : title.includes('PERMANENT') ? '/services/permanent-makeup' : '/404';
               return (
                 <div 
                   key={idx} 

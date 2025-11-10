@@ -27,6 +27,12 @@ function App() {
             <Route path="/services/lash-extensions" element={<ServicesDetails />} />
             <Route path="/services/laser-hair-removal" element={<ServicesDetails />} />
             <Route path="/services/brows-lashes" element={<ServicesDetails />} />
+            <Route path="/services/makeup" element={<ServicesDetails />} />
+            <Route path="/services/permanent-makeup" element={<ServicesDetails />} />
+            <Route path="/services/body-slim-treatment" element={<ServicesDetails />} />
+            <Route path="/services/hair-dressing" element={<ServicesDetails />} />
+            <Route path="/services/facials" element={<ServicesDetails />} />
+            <Route path="/services/aesthetics" element={<ServicesDetails />} />
             <Route path="/services-details" element={<ServicesDetails />} />
             <Route path="/gallery" element={<GalleryView />} />
             <Route path="/price-list" element={<PriceList />} />

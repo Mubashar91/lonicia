@@ -282,6 +282,187 @@ export const browsLashesDetails: ServiceDetails = {
 export const browsLashesGallery: readonly GalleryItem[] = [
   { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-10 at 11.56.18 PM.mp4', poster: '/bowsone.jpeg' },
   { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-11 at 12.04.21 AM.mp4', poster: '/bowsone.jpeg' },
+  { type: 'video', src: '/lash/lash1video.mp4', poster: '/lash/lashone.jpeg' },
+  { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasheight.jpeg' },
+  { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
   { type: 'image', src: '/lashesbowes/WhatsApp Image 2025-11-11 at 12.08.47 AM.jpeg' },
   { type: 'image', src: '/bowsone.jpeg' },
+  { type: 'image', src: '/lash/lashone.jpeg' },
+  { type: 'image', src: '/lash/lasttwo.jpeg' },
+  { type: 'image', src: '/lash/lashthree.jpeg' },
+  { type: 'image', src: '/lash/lashfour.jpeg' },
+  { type: 'image', src: '/lash/lashfive.jpeg' },
+  { type: 'image', src: '/lash/lastsix.jpeg' },
+  { type: 'image', src: '/lash/lashseven.jpeg' },
+  { type: 'image', src: '/lash/lasheight.jpeg' },
+  { type: 'image', src: '/lash/lashnine.jpeg' },
+] as const;
+
+// MAKEUP data
+export const makeupDetails: ServiceDetails = {
+  category: 'MAKEUP',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Look stunning for any occasion with our professional makeup services.\n\nAt MK Nails & Beauty, our talented makeup artists create flawless looks tailored to your style and event. Whether you need a natural everyday glow, glamorous evening makeup, or a complete bridal transformation, we use premium products and expert techniques to enhance your natural beauty and boost your confidence.",
+  howItWorks:
+    "We start with a consultation to understand your desired look and the occasion. Our makeup artists then prepare your skin with quality primers and foundations matched to your skin tone. We carefully apply eye makeup, contouring, highlighting, and finishing touches to create a cohesive, long-lasting look that photographs beautifully and feels comfortable all day.",
+  whatToExpect: [
+    'Customized makeup for any occasion or event.',
+    'Professional application using premium products.',
+    'Flawless, long-lasting results.',
+    'Skin-matched foundation and color coordination.',
+    'Expert contouring and highlighting techniques.',
+    'Bridal makeup packages available.',
+    'Comfortable, breathable finish.',
+  ],
+  closingText:
+    "Feel confident and beautiful — let our makeup artists bring out your best features for any special moment.",
+  mainImage: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
+  pricing: [
+    { name: 'Day Makeup', price: '€30' },
+    { name: 'Evening Makeup', price: '€40' },
+    { name: 'Bridal Makeup', price: '€60' },
+    { name: 'Makeup Trial', price: '€35' },
+    { name: 'Special Event Makeup', price: '€45' },
+    { name: 'Makeup Lesson (1 hour)', price: '€50' },
+  ],
+};
+
+export const makeupGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg' },
+  { type: 'image', src: '/makeup/910d08ea-a0b1-4d07-aed1-0a285a604bf7.jpeg' },
+  { type: 'image', src: '/makeup/9ac263ae-5408-44bb-a381-870e78503129.jpeg' },
+  { type: 'image', src: '/makeup/c6839767-1a07-4ee0-b9a7-1aa69b08906b.jpeg' },
+  { type: 'image', src: '/makeup/dcc1f264-7d43-4006-be82-2c2c768216d5.jpeg' },
+  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6.jpeg' },
+  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6 (1).jpeg' },
+] as const;
+
+// PERMANENT MAKEUP data
+export const permanentMakeupDetails: ServiceDetails = {
+  category: 'PERMANENT MAKEUP',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Wake up with perfect brows, lips, and eyeliner every day.\n\nAt MK Nails & Beauty, our certified permanent makeup artists use advanced techniques and premium pigments to create natural-looking, long-lasting results. Whether you want perfectly shaped brows, defined lips, or subtle eyeliner, we customize each treatment to enhance your natural features and save you time on your daily makeup routine.",
+  howItWorks:
+    "Permanent makeup, also known as cosmetic tattooing or micropigmentation, involves depositing pigment into the dermal layer of the skin. We begin with a detailed consultation to design your desired look, select the perfect color match, and ensure you're comfortable with the process. Using sterile, single-use needles and premium pigments, we carefully apply the makeup with precision. A touch-up session is typically needed 4-6 weeks later for optimal results.",
+  whatToExpect: [
+    'Natural-looking, long-lasting results (1-3 years).',
+    'Customized shape and color to suit your features.',
+    'Minimal discomfort with numbing cream.',
+    'Save time on daily makeup application.',
+    'Waterproof and smudge-proof.',
+    'Professional consultation and design.',
+    'Touch-up session included in pricing.',
+    'Strict hygiene and safety protocols.',
+  ],
+  closingText:
+    "Invest in yourself with permanent makeup — wake up beautiful and confident every single day.",
+  mainImage: '/permanent.jpeg',
+  pricing: [
+    { name: 'Brows (Microblading)', price: '€150' },
+    { name: 'Brows (Powder/Ombre)', price: '€150' },
+    { name: 'Brows Touch-up (4-6 weeks)', price: '€50' },
+    { name: 'Brows Annual Refresh', price: '€100' },
+    { name: 'Lips (Full)', price: '€150' },
+    { name: 'Lips Touch-up (4-6 weeks)', price: '€50' },
+    { name: 'Lips Annual Refresh', price: '€100' },
+    { name: 'Eyeliner (Upper)', price: '€120' },
+    { name: 'Eyeliner (Lower)', price: '€100' },
+    { name: 'Eyeliner Touch-up (4-6 weeks)', price: '€40' },
+    { name: 'Eyeliner Annual Refresh', price: '€80' },
+    { name: 'Removal/Correction (per session)', price: '€100' },
+  ],
+};
+
+export const permanentMakeupGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/permanent.jpeg' },
+  { type: 'image', src: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg' },
+  { type: 'image', src: '/makeup/910d08ea-a0b1-4d07-aed1-0a285a604bf7.jpeg' },
+  { type: 'image', src: '/makeup/9ac263ae-5408-44bb-a381-870e78503129.jpeg' },
+  { type: 'image', src: '/makeup/c6839767-1a07-4ee0-b9a7-1aa69b08906b.jpeg' },
+  { type: 'image', src: '/makeup/dcc1f264-7d43-4006-be82-2c2c768216d5.jpeg' },
+  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6.jpeg' },
+  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6 (1).jpeg' },
+] as const;
+
+// BODY SLIM TREATMENT data
+export const bodySlimDetails: ServiceDetails = {
+  category: 'BODY SLIM TREATMENT',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Transform your body with our advanced body slimming treatments.\n\nAt MK Nails & Beauty, we offer cutting-edge body contouring and slimming treatments designed to help you achieve your desired shape. Using state-of-the-art technology and proven techniques, our treatments target stubborn fat, reduce cellulite, and tone your body for a more sculpted appearance.",
+  howItWorks:
+    "Our body slimming treatments use a combination of advanced technologies including radiofrequency, cavitation, and lymphatic drainage massage. These non-invasive procedures work by breaking down fat cells, improving circulation, and promoting natural detoxification. Each session is customized to target your specific problem areas and goals.",
+  whatToExpect: [
+    'Non-invasive body contouring and fat reduction.',
+    'Visible results after multiple sessions.',
+    'Cellulite reduction and skin tightening.',
+    'Improved body shape and contours.',
+    'Customized treatment plans for your goals.',
+    'Safe, comfortable procedures with no downtime.',
+    'Professional consultation and progress tracking.',
+  ],
+  closingText:
+    "Achieve the body you've always wanted — let our advanced treatments help you look and feel your absolute best.",
+  mainImage: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
+  pricing: [
+    { name: 'Single Session', price: '€60' },
+    { name: 'Package of 5 Sessions', price: '€270' },
+    { name: 'Package of 10 Sessions', price: '€500' },
+    { name: 'Consultation', price: 'Free' },
+  ],
+};
+
+export const bodySlimGallery: readonly GalleryItem[] = [
+  { type: 'video', src: '/body-slim/WhatsApp Video 2025-11-11 at 12.59.06 AM.mp4', poster: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg' },
+  { type: 'video', src: '/body-slim/WhatsApp Video 2025-11-11 at 12.59.06 AM (1).mp4', poster: '/body-slim/WhatsApp Image 2025-11-11 at 12.59.06 AM.jpeg' },
+  { type: 'video', src: '/body-slim/WhatsApp Video 2025-11-11 at 1.00.05 AM.mp4', poster: '/body-slim/WhatsApp Image 2025-11-11 at 1.04.44 AM.jpeg' },
+  { type: 'image', src: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg' },
+  { type: 'image', src: '/body-slim/WhatsApp Image 2025-11-11 at 12.59.06 AM.jpeg' },
+  { type: 'image', src: '/body-slim/WhatsApp Image 2025-11-11 at 12.59.27 AM.jpeg' },
+  { type: 'image', src: '/body-slim/WhatsApp Image 2025-11-11 at 1.04.44 AM.jpeg' },
+] as const;
+
+// HAIR DRESSING data
+export const hairDressingDetails: ServiceDetails = {
+  category: 'HAIR DRESSING',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Transform your look with our professional hair dressing services.\n\nAt MK Nails & Beauty, our skilled hair stylists offer a full range of hair services from cuts and colors to styling and treatments. Whether you want a fresh new look, a special occasion style, or regular maintenance, we use premium products and the latest techniques to give you beautiful, healthy hair.",
+  howItWorks:
+    "We begin with a consultation to understand your hair goals and assess your hair type and condition. Our stylists then recommend the best approach, whether it's a precision cut, vibrant color, smoothing treatment, or elegant styling. We use professional-grade products and proven techniques to achieve stunning results while maintaining hair health.",
+  whatToExpect: [
+    'Expert cuts and styling for all hair types.',
+    'Professional coloring and highlights.',
+    'Hair treatments for health and shine.',
+    'Special occasion styling and updos.',
+    'Personalized consultation and recommendations.',
+    'Premium products for lasting results.',
+    'Comfortable, relaxing salon experience.',
+  ],
+  closingText:
+    "Look and feel amazing with hair that turns heads — let our expert stylists create your perfect look.",
+  mainImage: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
+  pricing: [
+    { name: 'Haircut (Women)', price: '€25' },
+    { name: 'Haircut (Men)', price: '€15' },
+    { name: 'Blow Dry', price: '€20' },
+    { name: 'Hair Color (Full)', price: '€60' },
+    { name: 'Highlights', price: '€70' },
+    { name: 'Balayage', price: '€80' },
+    { name: 'Hair Treatment', price: '€30' },
+    { name: 'Keratin Treatment', price: '€100' },
+    { name: 'Updo/Special Styling', price: '€40' },
+  ],
+};
+
+export const hairDressingGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg' },
+  { type: 'image', src: '/hairs-dessing/284f07f8-a119-47ca-85b8-2e1c4564774e.jpeg' },
+  { type: 'image', src: '/hairs-dessing/3872f5ba-70c8-4e67-a93c-07d400f34bb0.jpeg' },
+  { type: 'image', src: '/hairs-dessing/81515948-7229-4e91-8b2f-6abb95acf9ea.jpeg' },
+  { type: 'image', src: '/hairs-dessing/9053c9d7-6163-4d17-a9e2-d9b5ceb0dc19.jpeg' },
+  { type: 'image', src: '/hairs-dessing/d9df824a-4283-4644-ac8c-26029db90a28.jpeg' },
+  { type: 'image', src: '/hairs-dessing/ec86b7f0-4c91-4964-8cd6-cedeb0fe3a48.jpeg' },
 ] as const;

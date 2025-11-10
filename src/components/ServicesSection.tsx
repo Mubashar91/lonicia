@@ -30,7 +30,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             {
               title: 'MANICURE',
               tag: 'Women/Mens',
-              url: '/manicure.jpg',
+              url: '/manicure.jpeg',
               price: 'From €20',
             },
             {
@@ -58,14 +58,15 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               price: 'From €40',
             },
             // {
+            //   title: 'MAKEUP',
+            //   tag: 'Women',
+            //   url: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
+            //   price: 'From €30',
+            // },
+            // {
             //   title: 'HAIR DRESSING',
             //   tag: 'Women/Mens',
             //   url: '/hair-dressing.jpg',
-            // },
-            // {
-            //   title: 'MAKEUP',
-            //   tag: 'Women',
-            //   url: '/makeup.jpg',
             // },
             // {
             //   title: 'FACIALS',
@@ -99,6 +100,10 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               ? '/services/pedicure'
               : titleUpper.includes('LASER')
               ? '/services/laser-hair-removal'
+              : titleUpper.includes('PERMANENT')
+              ? '/services/permanent-makeup'
+              : titleUpper.includes('MAKEUP')
+              ? '/services/makeup'
               : '/services';
             return (
             <div 

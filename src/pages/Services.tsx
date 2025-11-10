@@ -64,17 +64,17 @@ const Services = () => {
               {
                 title: 'LASER HAIR REMOVAL',
                 tag: 'Women/Mens',
-                url: '/laser.jpg',
+                url: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg',
               },
               {
                 title: 'MANICURE',
                 tag: 'Women/Mens',
-                url: '/manicure.jpg',
+                url: '/manicure.jpeg',
               },
               {
                 title: 'PEDICURE',
                 tag: 'Women/Mens',
-                url: '/pedicure.jpg',
+                url: '/pedicure.jpeg',
               },
               {
                 title: 'BROWS/LASHES',
@@ -84,7 +84,7 @@ const Services = () => {
               {
                 title: 'PERMANENT MAKEUP',
                 tag: 'Women',
-                url: '/permanent.jpeg',
+                url: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg',
               },
               {
                 title: 'LASH EXTENSIONS',
@@ -94,25 +94,22 @@ const Services = () => {
               {
                 title: 'BODY SLIM TREATMENT',
                 tag: 'Women/Mens',
-                url: '/body-slim.jpeg',
+                url: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
               },
               {
                 title: 'FACIALS',
                 tag: 'Women/Mens',
-                 url: '/hair-dressing.jpg',
+                url: '/facials.jpg',
               },
               {
                 title: 'HAIR DRESSING',
                 tag: 'Women/Mens',
-              
-
-
-                 url: '/facials.jpg',
+                url: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
               },
               {
                 title: 'MAKEUP',
-                tag: 'Women/Mens',
-                url: '/makeup.jpg',
+                tag: 'Women',
+                url: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
               },
               {
                 title: 'AESTHETICS',
@@ -125,6 +122,24 @@ const Services = () => {
                 ? '/services/manicure'
                 : title === 'LASH EXTENSIONS'
                 ? '/services/lash-extensions'
+                : title === 'PEDICURE'
+                ? '/services/pedicure'
+                : title.includes('LASER')
+                ? '/services/laser-hair-removal'
+                : title.includes('BROWS') || title.includes('LASHES')
+                ? '/services/brows-lashes'
+                : title === 'PERMANENT MAKEUP'
+                ? '/services/permanent-makeup'
+                : title === 'MAKEUP'
+                ? '/services/makeup'
+                : title === 'BODY SLIM TREATMENT'
+                ? '/services/body-slim-treatment'
+                : title === 'HAIR DRESSING'
+                ? '/services/hair-dressing'
+                : title === 'FACIALS'
+                ? '/services/facials'
+                : title === 'AESTHETICS'
+                ? '/services/aesthetics'
                 : '/404';
               return (
               <div 
