@@ -234,8 +234,8 @@ export const laserDetails: ServiceDetails = {
 };
 
 export const laserGallery: readonly GalleryItem[] = [
-  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.06 PM.mp4', poster: '/laser-hair-removel/2ndddd.jpeg' },
   { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.10 PM.mp4', poster: '/laser-hair-removel/3rddd.jpeg' },
+  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.06 PM.mp4', poster: '/laser-hair-removel/2ndddd.jpeg' },
   { type: 'image', src: '/laser-hair-removel/2ndddd.jpeg' },
   { type: 'image', src: '/laser-hair-removel/3rddd.jpeg' },
   { type: 'image', src: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg' },
