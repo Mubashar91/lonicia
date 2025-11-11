@@ -23,10 +23,10 @@ const ServicesDetails = () => {
   // Get current service title to filter it out
   const currentServiceTitle = serviceDetails.category;
   
-  // Filter out the current service from explore services
-  const exploreServices = exploreServicesDefault.filter(service => 
-    service.title.trim().toUpperCase() !== currentServiceTitle
-  );
+  // Filter out the current service from explore services and limit to 3
+  const exploreServices = exploreServicesDefault
+    .filter(service => service.title.trim().toUpperCase() !== currentServiceTitle)
+    .slice(0, 3);
 
   const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : isMakeup ? makeupGallery : isPermanentMakeup ? permanentMakeupGallery : isBodySlim ? bodySlimGallery : isHairDressing ? hairDressingGallery : isFacials ? facialsGallery : isAesthetics ? aestheticsGallery : manicureGallery;
 

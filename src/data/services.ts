@@ -85,12 +85,52 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'MANICURE',
     tag: 'Women/Mens',
-    url: 'https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop',
+    url: '/manicure.jpeg',
   },
   {
     title: 'PEDICURE',
     tag: 'Women/Mens',
     url: '/pedicure/pedicuremian.jpeg',
+  },
+  {
+    title: 'LASH EXTENSIONS',
+    tag: 'Women',
+    url: '/lash/lashone.jpeg',
+  },
+  {
+    title: 'BROWS / LASHES',
+    tag: 'Women/Mens',
+    url: '/bowsone.jpeg',
+  },
+  {
+    title: 'PERMANENT MAKEUP',
+    tag: 'Women',
+    url: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg',
+  },
+  {
+    title: 'MAKEUP',
+    tag: 'Women',
+    url: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
+  },
+  {
+    title: 'BODY SLIM TREATMENT',
+    tag: 'Women/Mens',
+    url: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
+  },
+  {
+    title: 'HAIR DRESSING',
+    tag: 'Women/Mens',
+    url: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
+  },
+  {
+    title: 'FACIALS',
+    tag: 'Women/Mens',
+    url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+  },
+  {
+    title: 'AESTHETICS',
+    tag: 'Women/Mens',
+    url: '/asthetic.jpeg',
   },
 ];
 
