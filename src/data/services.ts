@@ -239,9 +239,6 @@ export const laserGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg' },
   { type: 'image', src: '/laser-hair-removel/ac022cb6-9423-4434-a210-1f4ffe063fe4.jpeg' },
   { type: 'image', src: '/laser-hair-removel/b19d58d9-0679-4fed-8b36-2520f707cc3e.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/b5990988-f416-4748-aa48-fd13f73e7e21.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/bbf96be0-9db9-4382-874f-45979a6ba193.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/ed31cdeb-f61b-4e20-8471-e1f303890634.jpeg' },
   { type: 'image', src: '/laser-hair-removel/fc52d219-0587-4e5b-ba2b-75fbe59bc797.jpeg' },
 ] as const;
 

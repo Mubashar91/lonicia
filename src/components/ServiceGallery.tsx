@@ -95,7 +95,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               <div className="h-[68vh]"></div>
               {item.type === 'video' ? (
                 <video
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                   src={encodeURI(item.src)}
                   poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                   muted
@@ -109,7 +109,7 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                 <img
                   src={encodeURI(item.src)}
                   alt="Service work"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-contain"
                   loading="lazy"
                   onError={(e) => {
                     const el = e.currentTarget as HTMLImageElement;
