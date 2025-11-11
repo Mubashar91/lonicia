@@ -64,7 +64,7 @@ const Services = () => {
               {
                 title: 'LASER HAIR REMOVAL',
                 tag: 'Women/Mens',
-                url: '/laser-hair-removel/one.jpeg',
+                url: '/laser.jpg',
               },
               {
                 title: 'MANICURE',

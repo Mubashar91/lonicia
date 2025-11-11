@@ -183,9 +183,9 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                     poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                     muted
                     loop
-                    autoPlay={activeIndex === actualIndex}
+                    autoPlay={actualIndex === 1 || activeIndex === actualIndex}
                     playsInline
-                    preload={activeIndex === actualIndex ? 'auto' : 'metadata'}
+                    preload={actualIndex === 1 || activeIndex === actualIndex ? 'auto' : 'metadata'}
                     onPlay={(e) => pauseOthers(e.currentTarget)}
                   />
                 ) : (
