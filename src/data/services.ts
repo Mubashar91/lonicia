@@ -234,13 +234,12 @@ export const laserDetails: ServiceDetails = {
 };
 
 export const laserGallery: readonly GalleryItem[] = [
-  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.06 PM.mp4', poster: '/laser.jpg' },
-  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.10 PM.mp4', poster: '/laser.jpg' },
-  { type: 'video', src: '/video/WhatsApp Video 2025-11-08 at 2.38.21 PM.mp4', poster: '/laser.jpg' },
-  { type: 'image', src: '/laser.jpg' },
+  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.06 PM.mp4', poster: '/laser-hair-removel/2ndddd.jpeg' },
+  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.10 PM.mp4', poster: '/laser-hair-removel/3rddd.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/2ndddd.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/3rddd.jpeg' },
   { type: 'image', src: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg' },
   { type: 'image', src: '/laser-hair-removel/ac022cb6-9423-4434-a210-1f4ffe063fe4.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/b19d58d9-0679-4fed-8b36-2520f707cc3e.jpeg' },
   { type: 'image', src: '/laser-hair-removel/fc52d219-0587-4e5b-ba2b-75fbe59bc797.jpeg' },
 ] as const;
 
