@@ -20,7 +20,13 @@ const ServicesDetails = () => {
 
   const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : isMakeup ? makeupDetails : isPermanentMakeup ? permanentMakeupDetails : isBodySlim ? bodySlimDetails : isHairDressing ? hairDressingDetails : isFacials ? facialsDetails : isAesthetics ? aestheticsDetails : manicureDetails;
 
-  const exploreServices = exploreServicesDefault;
+  // Get current service title to filter it out
+  const currentServiceTitle = serviceDetails.category;
+  
+  // Filter out the current service from explore services
+  const exploreServices = exploreServicesDefault.filter(service => 
+    service.title.trim().toUpperCase() !== currentServiceTitle
+  );
 
   const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : isMakeup ? makeupGallery : isPermanentMakeup ? permanentMakeupGallery : isBodySlim ? bodySlimGallery : isHairDressing ? hairDressingGallery : isFacials ? facialsGallery : isAesthetics ? aestheticsGallery : manicureGallery;
 
