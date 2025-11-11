@@ -114,7 +114,7 @@ const Services = () => {
               {
                 title: 'AESTHETICS',
                 tag: 'Women/Mens',
-                url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+                url: '/asthetic.jpeg',
               },
             ].map((card, idx) => {
               const title = card.title.trim().toUpperCase();
