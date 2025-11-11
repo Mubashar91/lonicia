@@ -80,7 +80,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'LASER HAIR REMOVAL',
     tag: 'Women/Mens',
-    url: '/laser.jpg',
+    url: '/lyerrr.jpeg',
   },
   {
     title: 'MANICURE',
@@ -110,12 +110,12 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'MAKEUP',
     tag: 'Women',
-    url: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
+    url: '/makeup.jpg',
   },
   {
     title: 'BODY SLIM TREATMENT',
     tag: 'Women/Mens',
-    url: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
+    url: '/boday slim=-treatment.jpg',
   },
   {
     title: 'HAIR DRESSING',
@@ -125,7 +125,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'FACIALS',
     tag: 'Women/Mens',
-    url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+    url: '/hair-dressing.jpg',
   },
   {
     title: 'AESTHETICS',
@@ -276,6 +276,7 @@ export const laserDetails: ServiceDetails = {
 export const laserGallery: readonly GalleryItem[] = [
   { type: 'video', src: '/laser-hair-removel/six.mp4', poster: '/laser-hair-removel/one.jpeg' },
   { type: 'video', src: '/laser-hair-removel/seven.mp4', poster: '/laser-hair-removel/two.jpeg' },
+  { type: 'image', src: '/lyerrr.jpeg' },
   { type: 'image', src: '/laser-hair-removel/one.jpeg' },
   { type: 'image', src: '/laser-hair-removel/two.jpeg' },
   { type: 'image', src: '/laser-hair-removel/three.jpeg' },
@@ -318,22 +319,17 @@ export const browsLashesDetails: ServiceDetails = {
 };
 
 export const browsLashesGallery: readonly GalleryItem[] = [
-  { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-10 at 11.56.18 PM.mp4', poster: '/bowsone.jpeg' },
-  { type: 'video', src: '/lashesbowes/WhatsApp Video 2025-11-11 at 12.04.21 AM.mp4', poster: '/bowsone.jpeg' },
+  { type: 'video', src: '/lashesbowes/two.mp4', poster: '/lashesbowes/one.jpeg' },
   { type: 'video', src: '/lash/lash1video.mp4', poster: '/lash/lashone.jpeg' },
-  { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasheight.jpeg' },
+  // { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasheight.jpeg' },
   { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
-  { type: 'image', src: '/lashesbowes/WhatsApp Image 2025-11-11 at 12.08.47 AM.jpeg' },
-  { type: 'image', src: '/bowsone.jpeg' },
-  { type: 'image', src: '/lash/lashone.jpeg' },
+  { type: 'image', src: '/lashesbowes/one.jpeg' },
+  // { type: 'image', src: '/lash/lashone.jpeg' },
   { type: 'image', src: '/lash/lasttwo.jpeg' },
   { type: 'image', src: '/lash/lashthree.jpeg' },
   { type: 'image', src: '/lash/lashfour.jpeg' },
   { type: 'image', src: '/lash/lashfive.jpeg' },
-  { type: 'image', src: '/lash/lastsix.jpeg' },
-  { type: 'image', src: '/lash/lashseven.jpeg' },
   { type: 'image', src: '/lash/lasheight.jpeg' },
-  { type: 'image', src: '/lash/lashnine.jpeg' },
 ] as const;
 
 // MAKEUP data

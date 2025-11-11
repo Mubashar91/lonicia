@@ -64,7 +64,7 @@ const Services = () => {
               {
                 title: 'LASER HAIR REMOVAL',
                 tag: 'Women/Mens',
-                url: '/laser.jpg',
+                url: '/lyerrr.jpeg',
               },
               {
                 title: 'MANICURE',
@@ -94,22 +94,22 @@ const Services = () => {
               {
                 title: 'BODY SLIM TREATMENT',
                 tag: 'Women/Mens',
-                url: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
+                url: '/boday slim=-treatment.jpg',
               },
               {
                 title: 'FACIALS',
                 tag: 'Women/Mens',
-                url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+                url: '/hair-dressing.jpg',
               },
               {
                 title: 'HAIR DRESSING',
                 tag: 'Women/Mens',
-                url: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
+                url: '/facials.jpg',
               },
               {
                 title: 'MAKEUP',
                 tag: 'Women',
-                url: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
+                url: '/makeup.jpg',
               },
               {
                 title: 'AESTHETICS',

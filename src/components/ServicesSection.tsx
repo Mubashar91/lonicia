@@ -24,7 +24,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             {
               title: 'LASER HAIR REMOVAL',
               tag: 'Women/Mens',
-              url: '/laser.jpg',
+              url: '/lyerrr.jpeg',
               price: 'From €10',
             },
             {
