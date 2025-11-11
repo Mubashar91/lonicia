@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
-import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, makeupDetails, makeupGallery, permanentMakeupDetails, permanentMakeupGallery, bodySlimDetails, bodySlimGallery, hairDressingDetails, hairDressingGallery, exploreServicesDefault } from '../data/services';
+import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, makeupDetails, makeupGallery, permanentMakeupDetails, permanentMakeupGallery, bodySlimDetails, bodySlimGallery, hairDressingDetails, hairDressingGallery, facialsDetails, facialsGallery, exploreServicesDefault } from '../data/services';
 
 const ServicesDetails = () => {
   const location = useLocation();
@@ -18,11 +18,11 @@ const ServicesDetails = () => {
   const isFacials = path.includes('facials');
   const isAesthetics = path.includes('aesthetics');
 
-  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : isMakeup ? makeupDetails : isPermanentMakeup ? permanentMakeupDetails : isBodySlim ? bodySlimDetails : isHairDressing ? hairDressingDetails : manicureDetails;
+  const serviceDetails = isLash ? lashDetails : isPedicure ? pedicureDetails : isLaser ? laserDetails : isBrowsLashes ? browsLashesDetails : isMakeup ? makeupDetails : isPermanentMakeup ? permanentMakeupDetails : isBodySlim ? bodySlimDetails : isHairDressing ? hairDressingDetails : isFacials ? facialsDetails : manicureDetails;
 
   const exploreServices = exploreServicesDefault;
 
-  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : isMakeup ? makeupGallery : isPermanentMakeup ? permanentMakeupGallery : isBodySlim ? bodySlimGallery : isHairDressing ? hairDressingGallery : manicureGallery;
+  const galleryItems = isLash ? lashGallery : isPedicure ? pedicureGallery : isLaser ? laserGallery : isBrowsLashes ? browsLashesGallery : isMakeup ? makeupGallery : isPermanentMakeup ? permanentMakeupGallery : isBodySlim ? bodySlimGallery : isHairDressing ? hairDressingGallery : isFacials ? facialsGallery : manicureGallery;
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 

@@ -468,3 +468,45 @@ export const hairDressingGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/hairs-dessing/d9df824a-4283-4644-ac8c-26029db90a28.jpeg' },
   { type: 'image', src: '/hairs-dessing/ec86b7f0-4c91-4964-8cd6-cedeb0fe3a48.jpeg' },
 ] as const;
+
+// FACIALS data
+export const facialsDetails: ServiceDetails = {
+  category: 'FACIALS',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Revitalize your skin with our luxurious facial treatments.\n\nAt MK Nails & Beauty, our professional facial services are designed to cleanse, nourish, and rejuvenate your skin. Using premium products and advanced techniques, we customize each treatment to your skin type and concerns, helping you achieve a healthy, radiant complexion.",
+  howItWorks:
+    "Our facial treatments begin with a thorough skin analysis to determine your specific needs. We then cleanse, exfoliate, and extract impurities, followed by a relaxing facial massage to improve circulation. A customized mask is applied to target your skin concerns, and we finish with serums and moisturizers to protect and hydrate your skin.",
+  whatToExpect: [
+    'Deep cleansing and exfoliation for refreshed skin.',
+    'Customized treatment for your skin type and concerns.',
+    'Relaxing facial massage to improve circulation.',
+    'Extraction of impurities and blackheads.',
+    'Hydrating masks and serums for glowing skin.',
+    'Professional skincare advice and recommendations.',
+    'Immediate visible results with long-lasting benefits.',
+  ],
+  closingText:
+    "Treat your skin to the care it deserves — experience the glow of healthy, beautiful skin with our expert facial treatments.",
+  mainImage: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+  pricing: [
+    { name: 'Classic Facial', price: '€45' },
+    { name: 'Deep Cleansing Facial', price: '€55' },
+    { name: 'Anti-Aging Facial', price: '€65' },
+    { name: 'Hydrating Facial', price: '€50' },
+    { name: 'Brightening Facial', price: '€60' },
+    { name: 'Acne Treatment Facial', price: '€55' },
+    { name: 'Express Facial (30 min)', price: '€35' },
+    { name: 'Luxury Facial (90 min)', price: '€85' },
+  ],
+};
+
+export const facialsGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg' },
+  { type: 'image', src: '/facical/1a54ca56-5825-4338-ad1f-043c95f8fa76.jpeg' },
+  { type: 'image', src: '/facical/4d5d4bc6-a180-4689-b442-8d8657f9f5f8.jpeg' },
+  { type: 'image', src: '/facical/299daa2a-3122-4e80-a617-5f448fa5c87e.jpeg' },
+  { type: 'image', src: '/facical/1648f4c2-3237-4b59-af33-013cf0726d9c.jpeg' },
+  { type: 'image', src: '/facical/76138013-21bb-42bb-8b77-f2ed0ec9d1c7.jpeg' },
+  { type: 'image', src: '/facical/a3f9101a-9dc2-43da-85c8-c65511ddca81.jpeg' },
+] as const;

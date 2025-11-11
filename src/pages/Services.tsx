@@ -99,7 +99,7 @@ const Services = () => {
               {
                 title: 'FACIALS',
                 tag: 'Women/Mens',
-                url: '/facials.jpg',
+                url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
               },
               {
                 title: 'HAIR DRESSING',
