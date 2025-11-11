@@ -84,7 +84,7 @@ const Services = () => {
               {
                 title: 'PERMANENT MAKEUP',
                 tag: 'Women',
-                url: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg',
+                url: '/makeupp.jpg',
               },
               {
                 title: 'LASH EXTENSIONS',
