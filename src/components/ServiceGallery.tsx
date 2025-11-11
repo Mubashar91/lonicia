@@ -14,6 +14,7 @@ interface ServiceGalleryProps {
 const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onChange }) => {
   const scrollContainerRef = React.useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
+  const [playingVideos, setPlayingVideos] = React.useState<Set<number>>(new Set());
 
   const pauseOthers = (el: HTMLVideoElement) => {
     const container = scrollContainerRef.current;
@@ -23,6 +24,18 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
       if (v !== el && !v.paused) {
         try { v.pause(); } catch {}
       }
+    });
+  };
+
+  const handleVideoPlay = (index: number) => {
+    setPlayingVideos(prev => new Set(prev).add(index));
+  };
+
+  const handleVideoPause = (index: number) => {
+    setPlayingVideos(prev => {
+      const newSet = new Set(prev);
+      newSet.delete(index);
+      return newSet;
     });
   };
 
@@ -94,17 +107,39 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
             >
               <div className="h-[68vh]"></div>
               {item.type === 'video' ? (
-                <video
-                  className="absolute inset-0 w-full h-full object-contain"
-                  src={encodeURI(item.src)}
-                  poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
-                  muted
-                  loop
-                  autoPlay={actualIndex === activeIndex}
-                  playsInline
-                  preload={actualIndex === activeIndex ? 'auto' : 'metadata'}
-                  onPlay={(e) => pauseOthers(e.currentTarget)}
-                />
+                <>
+                  <video
+                    className="absolute inset-0 w-full h-full object-contain"
+                    src={encodeURI(item.src)}
+                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
+                    muted
+                    loop
+                    playsInline
+                    preload={actualIndex === activeIndex ? 'auto' : 'metadata'}
+                    onPlay={(e) => {
+                      pauseOthers(e.currentTarget);
+                      handleVideoPlay(actualIndex);
+                    }}
+                    onPause={() => handleVideoPause(actualIndex)}
+                  />
+                  {!playingVideos.has(actualIndex) && (
+                    <button
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors z-10"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
+                        if (video) video.play();
+                      }}
+                      aria-label="Play video"
+                    >
+                      <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                        <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  )}
+                </>
               ) : (
                 <img
                   src={encodeURI(item.src)}
@@ -136,17 +171,39 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
             >
               <div className="pb-[70%]"></div>
               {item.type === 'video' ? (
-                <video
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src={encodeURI(item.src)}
-                  poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
-                  muted
-                  loop
-                  autoPlay
-                  playsInline
-                  preload="auto"
-                  onPlay={(e) => pauseOthers(e.currentTarget)}
-                />
+                <>
+                  <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src={encodeURI(item.src)}
+                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
+                    muted
+                    loop
+                    playsInline
+                    preload="auto"
+                    onPlay={(e) => {
+                      pauseOthers(e.currentTarget);
+                      handleVideoPlay(0);
+                    }}
+                    onPause={() => handleVideoPause(0)}
+                  />
+                  {!playingVideos.has(0) && (
+                    <button
+                      className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors z-10"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
+                        if (video) video.play();
+                      }}
+                      aria-label="Play video"
+                    >
+                      <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                        <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  )}
+                </>
               ) : (
                 <img
                   src={encodeURI(item.src)}
@@ -177,17 +234,39 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               >
                 <div className="pb-[75%]"></div>
                 {item.type === 'video' ? (
-                  <video
-                    className="absolute inset-0 w-full h-full object-cover"
-                    src={encodeURI(item.src)}
-                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
-                    muted
-                    loop
-                    autoPlay
-                    playsInline
-                    preload="auto"
-                    onPlay={(e) => pauseOthers(e.currentTarget)}
-                  />
+                  <>
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      src={encodeURI(item.src)}
+                      poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      onPlay={(e) => {
+                        pauseOthers(e.currentTarget);
+                        handleVideoPlay(actualIndex);
+                      }}
+                      onPause={() => handleVideoPause(actualIndex)}
+                    />
+                    {!playingVideos.has(actualIndex) && (
+                      <button
+                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors z-10"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
+                          if (video) video.play();
+                        }}
+                        aria-label="Play video"
+                      >
+                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                          <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </button>
+                    )}
+                  </>
                 ) : (
                   <img
                     src={encodeURI(item.src)}
@@ -219,17 +298,39 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               >
                 <div className="pb-[75%]"></div>
                 {item.type === 'video' ? (
-                  <video
-                    className="absolute inset-0 w-full h-full object-cover"
-                    src={encodeURI(item.src)}
-                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
-                    muted
-                    loop
-                    autoPlay
-                    playsInline
-                    preload="auto"
-                    onPlay={(e) => pauseOthers(e.currentTarget)}
-                  />
+                  <>
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      src={encodeURI(item.src)}
+                      poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
+                      muted
+                      loop
+                      playsInline
+                      preload="auto"
+                      onPlay={(e) => {
+                        pauseOthers(e.currentTarget);
+                        handleVideoPlay(actualIndex);
+                      }}
+                      onPause={() => handleVideoPause(actualIndex)}
+                    />
+                    {!playingVideos.has(actualIndex) && (
+                      <button
+                        className="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors z-10"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
+                          if (video) video.play();
+                        }}
+                        aria-label="Play video"
+                      >
+                        <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                          <svg className="w-8 h-8 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </button>
+                    )}
+                  </>
                 ) : (
                   <img
                     src={encodeURI(item.src)}
