@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
+import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
 
 export type GalleryItem =
   | { type: 'video'; src: string; poster: string }
@@ -98,7 +99,7 @@ const GalleryView: React.FC = () => {
 
   const MediaContainer: React.FC<{ item: GalleryItem; index: number }> = ({ item, index }) => (
     <div className="snap-center shrink-0 w-screen flex justify-center items-center p-2 md:p-4">
-      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-full max-w-[420px] h-[70vh] md:h-[80vh] max-h-[460px] md:max-h-[500px] flex items-center justify-center">
+      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-full max-w-[95vw] md:max-w-[85vw] h-[70vh] md:h-[80vh] flex items-center justify-center relative">
         {item.type === 'video' ? (
           <video
             src={encodeURI(item.src)}
@@ -110,16 +111,70 @@ const GalleryView: React.FC = () => {
             playsInline
           />
         ) : (
-          <img
-            src={encodeURI(item.src)}
-            alt={`Media ${index + 1}`}
-            className="w-full h-full object-contain"
-            loading="lazy"
-            onError={(e) => {
-              const target = e.target as HTMLImageElement;
-              target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgdmlld0JveD0iMCAwIDcwMCA3MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSIjMjIyIi8+CjxwYXRoIGQ9Ik00MjAgMzUwTDI4MCA0OTBNNDIwIDM1MEwyODAgMjEwTTQyMCAzNTBINDkwTTQyMCAzNTBIMzUwIiBzdHJva2U9IiM2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxjaXJjbGUgY3g9IjQyMCIgY3k9IjM1MCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=';
-            }}
-          />
+          <TransformWrapper
+            initialScale={1}
+            minScale={1}
+            maxScale={4}
+            doubleClick={{ mode: 'toggle', step: 0.7 }}
+            wheel={{ step: 0.1 }}
+            pinch={{ step: 5 }}
+            panning={{ velocityDisabled: true }}
+          >
+            {({ zoomIn, zoomOut, resetTransform, instance }) => (
+              <>
+                <TransformComponent
+                  wrapperClass="w-full h-full"
+                  contentClass="w-full h-full flex items-center justify-center"
+                >
+                  <img
+                    src={encodeURI(item.src)}
+                    alt={`Media ${index + 1}`}
+                    className="max-w-full max-h-full object-contain select-none"
+                    loading="lazy"
+                    draggable={false}
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAwIiBoZWlnaHQ9IjcwMCIgdmlld0JveD0iMCAwIDcwMCA3MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iNzAwIiBmaWxsPSIjMjIyIi8+CjxwYXRoIGQ9Ik00MjAgMzUwTDI4MCA0OTBNNDIwIDM1MEwyODAgMjEwTTQyMCAzNTBINDkwTTQyMCAzNTBIMzUwIiBzdHJva2U9IiM2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxjaXJjbGUgY3g9IjQyMCIgY3k9IjM1MCIgcj0iNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzY2NiIgc3Ryb2tlLXdpZHRoPSIyIi8+Cjwvc3ZnPgo=';
+                    }}
+                  />
+                </TransformComponent>
+                {instance.transformState.scale > 1 && (
+                  <div className="absolute top-4 right-4 flex gap-2 z-10">
+                    <button
+                      onClick={() => zoomIn()}
+                      className="w-10 h-10 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/30 flex items-center justify-center transition-all shadow-lg"
+                      aria-label="Zoom in"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => zoomOut()}
+                      className="w-10 h-10 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/30 flex items-center justify-center transition-all shadow-lg"
+                      aria-label="Zoom out"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
+                      </svg>
+                    </button>
+                    <button
+                      onClick={() => resetTransform()}
+                      className="w-10 h-10 rounded-full bg-black/70 hover:bg-black/90 text-white border border-white/30 flex items-center justify-center transition-all shadow-lg"
+                      aria-label="Reset zoom"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                    </button>
+                  </div>
+                )}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-full text-sm border border-white/30 shadow-lg">
+                  {instance.transformState.scale > 1 ? `${Math.round(instance.transformState.scale * 100)}% zoom` : 'Double-tap or pinch to zoom'}
+                </div>
+              </>
+            )}
+          </TransformWrapper>
         )}
       </div>
     </div>

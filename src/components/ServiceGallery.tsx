@@ -162,11 +162,21 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
             <div
               key={`tall-${idx}`}
               className={`${idx === activeIndex ? 'ring-2 ring-blue-500' : activeIndex === 0 ? 'ring-1 ring-black' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer md:col-span-1 md:row-span-2`}
-              onClick={() => onChange(0)}
+              onClick={() => {
+                try {
+                  sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                } catch {}
+                navigate(`/gallery?start=0`);
+              }}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') onChange(0);
+                if (e.key === 'Enter' || e.key === ' ') {
+                  try {
+                    sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                  } catch {}
+                  navigate(`/gallery?start=0`);
+                }
               }}
             >
               <div className="pb-[70%]"></div>
@@ -225,11 +235,21 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               <div
                 key={`small-${actualIndex}`}
                 className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer`}
-                onClick={() => onChange(actualIndex)}
+                onClick={() => {
+                  try {
+                    sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                  } catch {}
+                  navigate(`/gallery?start=${actualIndex}`);
+                }}
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') onChange(actualIndex);
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    try {
+                      sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                    } catch {}
+                    navigate(`/gallery?start=${actualIndex}`);
+                  }
                 }}
               >
                 <div className="pb-[75%]"></div>
@@ -289,11 +309,21 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
               <div
                 key={`small-${actualIndex}`}
                 className={`${actualIndex === activeIndex ? 'ring-2 ring-blue-500' : 'ring-1 ring-black'} relative overflow-hidden rounded-none bg-black cursor-pointer`}
-                onClick={() => onChange(actualIndex)}
+                onClick={() => {
+                  try {
+                    sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                  } catch {}
+                  navigate(`/gallery?start=${actualIndex}`);
+                }}
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter' || e.key === ' ') onChange(actualIndex);
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    try {
+                      sessionStorage.setItem('serviceGalleryItems', JSON.stringify(items));
+                    } catch {}
+                    navigate(`/gallery?start=${actualIndex}`);
+                  }
                 }}
               >
                 <div className="pb-[75%]"></div>
