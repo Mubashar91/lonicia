@@ -410,16 +410,16 @@ export const permanentMakeupDetails: ServiceDetails = {
 };
 
 export const permanentMakeupGallery: readonly GalleryItem[] = [
-  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.03 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.03 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.27.28 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.14 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.22 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.59 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.27.16 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.30.13 AM.jpeg' },
+  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.28.47 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.31.11 AM.jpeg' },
   { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.27.28 AM.jpeg' },
   { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
   { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.59 AM.jpeg' },
   { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.30.13 AM.jpeg' },
   { type: 'image', src: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.31.11 AM.jpeg' },
-  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.14 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
-  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.26.22 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
-  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.27.16 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
-  { type: 'video', src: '/permanent-makeup/WhatsApp Video 2025-11-11 at 1.28.47 AM.mp4', poster: '/permanent-makeup/WhatsApp Image 2025-11-11 at 1.29.38 AM.jpeg' },
 ] as const;
 
 // BODY SLIM TREATMENT data

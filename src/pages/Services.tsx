@@ -153,7 +153,7 @@ const Services = () => {
                 }}
               >
                 {/* Service Image */}
-                <Link to={href} className="w-full h-[260px] sm:h-[340px] md:h-[420px] overflow-hidden rounded-[20px] block">
+                <Link to={href} className="w-full h-[380px] sm:h-[420px] md:h-[420px] overflow-hidden rounded-[20px] block">
                   <LazyImage
                     src={encodeURI(card.url)}
                     alt={card.title}
