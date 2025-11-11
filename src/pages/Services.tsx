@@ -64,7 +64,7 @@ const Services = () => {
               {
                 title: 'LASER HAIR REMOVAL',
                 tag: 'Women/Mens',
-                url: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg',
+                url: '/laser-hair-removel/one.jpeg',
               },
               {
                 title: 'MANICURE',
@@ -114,7 +114,7 @@ const Services = () => {
               {
                 title: 'AESTHETICS',
                 tag: 'Women/Mens',
-                url: '/asthetic.jpg',
+                url: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
               },
             ].map((card, idx) => {
               const title = card.title.trim().toUpperCase();

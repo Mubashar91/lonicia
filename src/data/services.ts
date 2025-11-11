@@ -234,13 +234,13 @@ export const laserDetails: ServiceDetails = {
 };
 
 export const laserGallery: readonly GalleryItem[] = [
-  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.10 PM.mp4', poster: '/laser-hair-removel/3rddd.jpeg' },
-  { type: 'video', src: '/laser-hair-removel/WhatsApp Video 2025-11-11 at 10.28.06 PM.mp4', poster: '/laser-hair-removel/2ndddd.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/2ndddd.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/3rddd.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/50d8d7bb-b998-45b9-a62b-e0cdf9dc3a72.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/ac022cb6-9423-4434-a210-1f4ffe063fe4.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/fc52d219-0587-4e5b-ba2b-75fbe59bc797.jpeg' },
+  { type: 'video', src: '/laser-hair-removel/six.mp4', poster: '/laser-hair-removel/one.jpeg' },
+  { type: 'video', src: '/laser-hair-removel/seven.mp4', poster: '/laser-hair-removel/two.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/one.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/two.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/three.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/four.jpeg' },
+  { type: 'image', src: '/laser-hair-removel/five.jpeg' },
 ] as const;
 
 // BROWS/LASHES data
@@ -507,4 +507,45 @@ export const facialsGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/facical/1648f4c2-3237-4b59-af33-013cf0726d9c.jpeg' },
   { type: 'image', src: '/facical/76138013-21bb-42bb-8b77-f2ed0ec9d1c7.jpeg' },
   { type: 'image', src: '/facical/a3f9101a-9dc2-43da-85c8-c65511ddca81.jpeg' },
+] as const;
+
+// AESTHETICS data
+export const aestheticsDetails: ServiceDetails = {
+  category: 'AESTHETICS',
+  aboutTitle: 'About this Services',
+  aboutDescription:
+    "Transform your appearance with our advanced aesthetic treatments.\n\nAt MK Nails & Beauty, we offer cutting-edge aesthetic services designed to enhance your natural beauty and boost your confidence. Our experienced practitioners use the latest techniques and premium products to deliver safe, effective results tailored to your unique needs.",
+  howItWorks:
+    "Our aesthetic treatments combine advanced technology with expert technique to address various concerns including skin rejuvenation, anti-aging, and facial enhancement. Each treatment begins with a thorough consultation to understand your goals and create a personalized treatment plan. We use medical-grade products and follow strict safety protocols to ensure optimal results.",
+  whatToExpect: [
+    'Professional consultation and personalized treatment plans.',
+    'Advanced aesthetic procedures for facial enhancement.',
+    'Safe, effective treatments with minimal downtime.',
+    'Natural-looking results that enhance your features.',
+    'Expert care from certified practitioners.',
+    'Follow-up support and aftercare guidance.',
+  ],
+  closingText:
+    "Discover the confidence that comes with looking and feeling your best — let our aesthetic experts help you achieve your beauty goals.",
+  mainImage: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
+  pricing: [
+    { name: 'Consultation', price: 'Free' },
+    { name: 'Anti-Wrinkle Treatment', price: '€150' },
+    { name: 'Dermal Fillers', price: '€200' },
+    { name: 'Skin Rejuvenation', price: '€120' },
+    { name: 'Chemical Peel', price: '€100' },
+    { name: 'Microneedling', price: '€150' },
+  ],
+};
+
+export const aestheticsGallery: readonly GalleryItem[] = [
+  { type: 'image', src: '/facical/1a54ca56-5825-4338-ad1f-043c95f8fa76.jpeg' },
+  { type: 'image', src: '/facical/4d5d4bc6-a180-4689-b442-8d8657f9f5f8.jpeg' },
+  { type: 'image', src: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg' },
+  { type: 'image', src: '/facical/299daa2a-3122-4e80-a617-5f448fa5c87e.jpeg' },
+  { type: 'image', src: '/facical/1648f4c2-3237-4b59-af33-013cf0726d9c.jpeg' },
+  { type: 'image', src: '/facical/76138013-21bb-42bb-8b77-f2ed0ec9d1c7.jpeg' },
+  { type: 'image', src: '/facical/a3f9101a-9dc2-43da-85c8-c65511ddca81.jpeg' },
+  { type: 'image', src: '/facical/b7cc4143-74a0-435f-a4de-9283d473ee04.jpeg' },
+  { type: 'image', src: '/facical/fd118a75-94f3-46e7-8d21-90e09017d01b.jpeg' },
 ] as const;
