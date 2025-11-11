@@ -120,7 +120,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'HAIR DRESSING',
     tag: 'Women/Mens',
-    url: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
+    url: '/facials.jpg',
   },
   {
     title: 'FACIALS',
@@ -536,13 +536,15 @@ export const facialsDetails: ServiceDetails = {
 };
 
 export const facialsGallery: readonly GalleryItem[] = [
-  { type: 'image', src: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg' },
-  { type: 'image', src: '/facical/1a54ca56-5825-4338-ad1f-043c95f8fa76.jpeg' },
-  { type: 'image', src: '/facical/4d5d4bc6-a180-4689-b442-8d8657f9f5f8.jpeg' },
-  { type: 'image', src: '/facical/299daa2a-3122-4e80-a617-5f448fa5c87e.jpeg' },
-  { type: 'image', src: '/facical/1648f4c2-3237-4b59-af33-013cf0726d9c.jpeg' },
-  { type: 'image', src: '/facical/76138013-21bb-42bb-8b77-f2ed0ec9d1c7.jpeg' },
-  { type: 'image', src: '/facical/a3f9101a-9dc2-43da-85c8-c65511ddca81.jpeg' },
+  { type: 'image', src: '/facical/1.jpeg' },
+  { type: 'image', src: '/facical/2.jpeg' },
+  { type: 'image', src: '/facical/3.jpeg' },
+  { type: 'image', src: '/facical/4.jpeg' },
+  { type: 'image', src: '/facical/5.jpeg' },
+  { type: 'image', src: '/facical/6.jpeg' },
+  { type: 'image', src: '/facical/7.jpeg' },
+  { type: 'image', src: '/facical/8.jpeg' },
+  { type: 'image', src: '/facical/9.jpeg' },
 ] as const;
 
 // AESTHETICS data
@@ -575,13 +577,14 @@ export const aestheticsDetails: ServiceDetails = {
 };
 
 export const aestheticsGallery: readonly GalleryItem[] = [
-  { type: 'image', src: '/facical/1a54ca56-5825-4338-ad1f-043c95f8fa76.jpeg' },
-  { type: 'image', src: '/facical/4d5d4bc6-a180-4689-b442-8d8657f9f5f8.jpeg' },
-  { type: 'image', src: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg' },
-  { type: 'image', src: '/facical/299daa2a-3122-4e80-a617-5f448fa5c87e.jpeg' },
-  { type: 'image', src: '/facical/1648f4c2-3237-4b59-af33-013cf0726d9c.jpeg' },
-  { type: 'image', src: '/facical/76138013-21bb-42bb-8b77-f2ed0ec9d1c7.jpeg' },
-  { type: 'image', src: '/facical/a3f9101a-9dc2-43da-85c8-c65511ddca81.jpeg' },
-  { type: 'image', src: '/facical/b7cc4143-74a0-435f-a4de-9283d473ee04.jpeg' },
-  { type: 'image', src: '/facical/fd118a75-94f3-46e7-8d21-90e09017d01b.jpeg' },
+  { type: 'image', src: '/asthetic/as1.jpeg' },
+  { type: 'image', src: '/asthetic/as2.jpeg' },
+  { type: 'image', src: '/asthetic/as3.jpeg' },
+  { type: 'image', src: '/asthetic/as4.jpeg' },
+  { type: 'image', src: '/asthetic/as5.jpeg' },
+  { type: 'image', src: '/asthetic/as7.jpeg' },
+  { type: 'image', src: '/asthetic/as8.jpeg' },
+  { type: 'image', src: '/asthetic/as10.jpeg' },
+  { type: 'image', src: '/asthetic/as11.jpeg' },
+  { type: 'image', src: '/asthetic/as12.jpeg' },
 ] as const;
