@@ -35,7 +35,11 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/35799958821', '_blank');
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const whatsappUrl = isMobile 
+      ? 'https://api.whatsapp.com/send?phone=35799958821'
+      : 'https://web.whatsapp.com/send?phone=35799958821';
+    window.open(whatsappUrl, '_blank');
   };
 
   return (

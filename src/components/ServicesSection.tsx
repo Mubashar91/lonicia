@@ -117,7 +117,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               }}
             >
               {/* Service Image */}
-              <Link to={href} className="w-full h-[380px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-[20px] block">
+              <Link to={href} className="w-full h-[450px] md:h-[380px] lg:h-[420px] overflow-hidden rounded-[20px] block">
                 <img
                   src={card.url}
                   alt={card.title}

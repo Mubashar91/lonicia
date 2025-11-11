@@ -80,7 +80,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'LASER HAIR REMOVAL',
     tag: 'Women/Mens',
-    url: '/lyerrr.jpeg',
+    url: '/laser-hair-removel111.jpeg',
   },
   {
     title: 'MANICURE',
@@ -169,18 +169,18 @@ export const lashDetails: ServiceDetails = {
 };
  
 export const lashGallery: readonly GalleryItem[] = [
-  // First, make the tall big card a video
   { type: 'video', src: '/lash/lash1video.mp4', poster: '/lash/lashone.jpeg' },
-  // Additional videos
-  { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasheight.jpeg' },
+  { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasttwo.jpeg' },
   { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
-  // Remaining images
+  { type: 'image', src: '/lash/lashone.jpeg' },
+  { type: 'image', src: '/lash/lasttwo.jpeg' },
+  { type: 'image', src: '/lash/lashthree.jpeg' },
   { type: 'image', src: '/lash/lashfour.jpeg' },
   { type: 'image', src: '/lash/lashfive.jpeg' },
-  { type: 'image', src: '/lash/lashseven.jpeg' },
-  { type: 'image', src: '/lash/lashnine.jpeg' },
-  { type: 'image', src: '/lash/lasttwo.jpeg' },
   { type: 'image', src: '/lash/lastsix.jpeg' },
+  { type: 'image', src: '/lash/lashseven.jpeg' },
+  { type: 'image', src: '/lash/lasheight.jpeg' },
+  { type: 'image', src: '/lash/lashnine.jpeg' },
 ] as const;
 
 // PEDICURE data
