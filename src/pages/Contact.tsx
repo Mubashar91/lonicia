@@ -106,20 +106,20 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      required
-                      placeholder="Last Name"
-                      className="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition"
-                    />
-                    <input
-                      type="text"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
                       required
                       placeholder="First Name"
+                      className="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition"
+                    />
+                    <input
+                      type="text"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                      placeholder="Last Name"
                       className="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent transition"
                     />
                   </div>
