@@ -80,7 +80,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'LASER HAIR REMOVAL',
     tag: 'Women/Mens',
-    url: '/realhairremoving.jpeg',
+    url: '/laser-hair-removel111.jpeg',
   },
   {
     title: 'MANICURE',
@@ -115,7 +115,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'BODY SLIM TREATMENT',
     tag: 'Women/Mens',
-    url: '/boday slim=-treatment.jpg',
+    url: '/realhairremoving.jpeg',
   },
   {
     title: 'HAIR DRESSING',
