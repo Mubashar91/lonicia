@@ -22,6 +22,7 @@ export default function VacancyModal({ open, onClose, presetRole }: Props) {
   const [cv, setCv] = React.useState<File | null>(null);
   const [submitting, setSubmitting] = React.useState(false);
   const endpoint = (import.meta as any).env?.VITE_FORMS_ENDPOINT as string | undefined;
+  const web3Key = (import.meta as any).env?.VITE_WEB3FORMS_KEY as string | undefined;
 
   React.useEffect(() => {
     if (presetRole) setRole(presetRole);
@@ -34,7 +35,23 @@ export default function VacancyModal({ open, onClose, presetRole }: Props) {
     if (!name || !email) return;
     setSubmitting(true);
     try {
-      if (endpoint) {
+      if (web3Key) {
+        const fd = new FormData();
+        fd.append('access_key', web3Key);
+        fd.append('subject', `Vacancy Application: ${role}`);
+        fd.append('from_name', name);
+        fd.append('from_email', email);
+        fd.append('role', role);
+        fd.append('message', message);
+        if (cv) fd.append('cv', cv, cv.name);
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: fd,
+        });
+        if (!res.ok) throw new Error('Failed');
+        onClose();
+        alert('Application sent successfully.');
+      } else if (endpoint) {
         const fd = new FormData();
         fd.append('role', role);
         fd.append('name', name);
