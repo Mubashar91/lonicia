@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import LazyImage from '../components/LazyImage';
+import { exploreServicesDefault } from '../data/services';
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -60,63 +61,7 @@ const Services = () => {
 
           {/* Service Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto justify-items-center">
-            {[
-              {
-                title: 'LASER HAIR REMOVAL',
-                tag: 'Women/Mens',
-                url: '/laser-hair-removel111.jpeg',
-              },
-              {
-                title: 'MANICURE',
-                tag: 'Women/Mens',
-                url: '/manicure.jpeg',
-              },
-              {
-                title: 'PEDICURE',
-                tag: 'Women/Mens',
-                url: '/pedicure.jpeg',
-              },
-              {
-                title: 'BROWS/LASHES',
-                tag: 'Women/Mens',
-                url: '/bowsone.jpeg',
-              },
-              {
-                title: 'PERMANENT MAKEUP',
-                tag: 'Women',
-                url: '/makeupp.jpg',
-              },
-              {
-                title: 'LASH EXTENSIONS',
-                tag: 'Women',
-                url: 'hdhd.jpg',
-              },
-              {
-                title: 'BODY SLIM TREATMENT',
-                tag: 'Women/Mens',
-                url: '/boday slim=-treatment.jpg',
-              },
-              {
-                title: 'FACIALS',
-                tag: 'Women/Mens',
-                url: '/hair-dressing.jpg',
-              },
-              {
-                title: 'HAIR DRESSING',
-                tag: 'Women/Mens',
-                url: '/facials.jpg',
-              },
-              {
-                title: 'MAKEUP',
-                tag: 'Women',
-                url: '/makeup.jpg',
-              },
-              {
-                title: 'AESTHETICS',
-                tag: 'Women/Mens',
-                url: '/asthetic.jpeg',
-              },
-            ].map((card, idx) => {
+            {exploreServicesDefault.map((card, idx) => {
               const title = card.title.trim().toUpperCase();
               const href = title === 'MANICURE'
                 ? '/services/manicure'

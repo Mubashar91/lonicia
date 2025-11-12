@@ -48,15 +48,21 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             {
               title: 'PERMANENT MAKEUP',
               tag: 'Women',
-              url: '/makeupp.jpg',
+              url: '/realpermanentmakeup.jpeg',
               price: 'From €40',
             },
             {
-              title: 'Lash extensions',
-              tag: 'Women/Mens',
-              url: '/hdhd.jpg',
-              price: 'From €40',
+              title: 'MAKEUP',
+              tag: 'Women',
+              url: '/realmackup.jpeg',
+              price: 'From €30',
             },
+            // {
+            //   title: 'Lash extensions',
+            //   tag: 'Women/Mens',
+            //   url: '/hdhd.jpg',
+            //   price: 'From €40',
+            // },
             // {
             //   title: 'MAKEUP',
             //   tag: 'Women',

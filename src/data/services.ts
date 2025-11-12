@@ -80,7 +80,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'LASER HAIR REMOVAL',
     tag: 'Women/Mens',
-    url: '/laser-hair-removel111.jpeg',
+    url: '/realhairremoving.jpeg',
   },
   {
     title: 'MANICURE',
@@ -95,7 +95,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'LASH EXTENSIONS',
     tag: 'Women',
-    url: '/lash/lashone.jpeg',
+    url: '/hdhd.jpg',
   },
   {
     title: 'BROWS / LASHES',
@@ -105,12 +105,12 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'PERMANENT MAKEUP',
     tag: 'Women',
-    url: '/makeupp.jpg',
+    url: '/realpermanentmakeup.jpeg',
   },
   {
     title: 'MAKEUP',
     tag: 'Women',
-    url: '/makeup.jpg',
+    url: '/realmackup.jpeg',
   },
   {
     title: 'BODY SLIM TREATMENT',
@@ -120,7 +120,7 @@ export const exploreServicesDefault: ExploreServiceCard[] = [
   {
     title: 'HAIR DRESSING',
     tag: 'Women/Mens',
-    url: '/facials.jpg',
+    url: '/realhairdressing.jpeg',
   },
   {
     title: 'FACIALS',

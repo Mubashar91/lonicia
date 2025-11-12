@@ -99,13 +99,13 @@ const GalleryView: React.FC = () => {
 
   const MediaContainer: React.FC<{ item: GalleryItem; index: number }> = ({ item, index }) => (
     <div className="snap-center shrink-0 w-screen flex justify-center items-center p-2 md:p-4">
-      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-full max-w-[95vw] md:max-w-[85vw] h-[70vh] md:h-[80vh] flex items-center justify-center relative">
+      <div className="rounded-none md:rounded-2xl overflow-hidden bg-black border border-white/20 w-auto max-w-[95vw] md:max-w-[85vw] h-auto flex items-center justify-center relative">
         {item.type === 'video' ? (
           <video
             src={encodeURI(item.src)}
             poster={encodeURI(item.poster)}
             controls
-            className="w-full h-full object-contain"
+            className="block max-w-full h-auto max-h-[80vh] md:max-h-[85vh] object-contain"
             onPlay={(e) => pauseOthers(e.currentTarget)}
             preload="metadata"
             playsInline
@@ -123,13 +123,13 @@ const GalleryView: React.FC = () => {
             {({ zoomIn, zoomOut, resetTransform, instance }) => (
               <>
                 <TransformComponent
-                  wrapperClass="w-full h-full"
-                  contentClass="w-full h-full flex items-center justify-center"
+                  wrapperClass="w-auto h-auto"
+                  contentClass="w-auto h-auto flex items-center justify-center"
                 >
                   <img
                     src={encodeURI(item.src)}
                     alt={`Media ${index + 1}`}
-                    className="max-w-full max-h-full object-contain select-none"
+                    className="block max-w-full h-auto max-h-[80vh] md:max-h-[85vh] object-contain select-none"
                     loading="lazy"
                     draggable={false}
                     onError={(e) => {

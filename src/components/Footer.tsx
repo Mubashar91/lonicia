@@ -42,7 +42,7 @@ const Footer = () => {
                 >
                   MK Nails & Beauty 1 Ioannou GLADSTONOS
                   <br className="hidden md:block" />
-                  SHOP 4 PANAYIOTION TOWER 6023, Larnaca
+                  {' '}SHOP 4 PANAYIOTION TOWER 6023, Larnaca
                 </a>
               </div>
 
@@ -116,21 +116,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Vacancies */}
+          {/* Information (Vacancies + Support) */}
           <div>
-            <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Vacancies</h4>
+            <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Information</h4>
             <ul className="grid grid-cols-2 gap-y-2 md:block md:space-y-3 text-sm">
-              {['nail technician','eyelash technician','cosmetologist','aesthetic injector','brows technician'].map((r) => (
-                <li key={r}>
-                  <Link to={`/vacancy?role=${encodeURIComponent(r)}`} className="hover:text-primary-gold transition">
-                    {r}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/contact" className="hover:text-primary-gold transition">Support</Link>
+              </li>
+              <li>
+                <Link to="/vacancy" className="hover:text-primary-gold transition">Vacancy</Link>
+              </li>
             </ul>
-            <Link to="/vacancy" className="mt-3 inline-block bg-primary-gold text-black px-4 py-2 rounded-md font-bold text-sm">
-              Apply now
-            </Link>
           </div>
 
           {/* Subscribe */}

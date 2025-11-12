@@ -1,14 +1,4 @@
 const AcademyBanner = () => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
-    if (isMobile) {
-      e.preventDefault();
-      window.open('https://api.whatsapp.com/send?phone=35799958821', '_blank');
-    }
-    // On desktop, let the default href="/contact" work
-  };
-
   return (
     <section className="bg-[#2B2B2B] text-white h-[320px] md:h-[360px] lg:h-[300px] relative overflow-hidden flex items-center">
       <div className="w-full px-0">
@@ -35,8 +25,7 @@ const AcademyBanner = () => {
 
           {/* CTA Button */}
           <a
-            href="/contact"
-            onClick={handleClick}
+            href="/vacancy"
             className="inline-block bg-primary-gold text-black px-10 py-3 rounded-lg font-bold hover:bg-opacity-90 transition uppercase tracking-wide text-[14px]"
           >
             JOIN US TODAY
