@@ -279,9 +279,9 @@ export const laserGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/lyerrr.jpeg' },
   { type: 'image', src: '/laser-hair-removel/one.jpeg' },
   { type: 'image', src: '/laser-hair-removel/two.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/three.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/four.jpeg' },
-  { type: 'image', src: '/laser-hair-removel/five.jpeg' },
+  // { type: 'image', src: '/laser-hair-removel/three.jpeg' },
+  // { type: 'image', src: '/laser-hair-removel/four.jpeg' },
+  // { type: 'image', src: '/laser-hair-removel/five.jpeg' },
 ] as const;
 
 // BROWS/LASHES data
