@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
+import Vacancy from './pages/Vacancy';
 import Services from './pages/Services';
 import ServicesDetails from './pages/ServicesDetails';
 import GalleryView from './pages/GalleryView';
@@ -39,6 +40,7 @@ function App() {
             <Route path="/shops" element={<Shops />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/vacancy" element={<Vacancy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

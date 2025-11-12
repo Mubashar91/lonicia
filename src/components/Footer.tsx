@@ -1,18 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import VacancyModal from './VacancyModal';
 
 const Footer = () => {
-  const [vacancyOpen, setVacancyOpen] = React.useState(false);
-  const [selectedRole, setSelectedRole] = React.useState<string | undefined>(undefined);
-
-  const openVacancy = (role?: string) => {
-    setSelectedRole(role);
-    setVacancyOpen(true);
-  };
-
-  const closeVacancy = () => setVacancyOpen(false);
-
   return (
     <footer className="bg-primary-dark text-primary-gold">
       <div className="container mx-auto px-4 md:px-6 lg:px-[90px] py-12 md:py-16">
@@ -130,18 +119,18 @@ const Footer = () => {
           {/* Vacancies */}
           <div>
             <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Vacancies</h4>
-            <ul className="space-y-2 text-sm">
+            <ul className="grid grid-cols-2 gap-y-2 md:block md:space-y-3 text-sm">
               {['nail technician','eyelash technician','cosmetologist','aesthetic injector','brows technician'].map((r) => (
                 <li key={r}>
-                  <button onClick={() => openVacancy(r)} className="hover:text-primary-gold transition underline underline-offset-4">
+                  <Link to={`/vacancy?role=${encodeURIComponent(r)}`} className="hover:text-primary-gold transition">
                     {r}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>
-            <button onClick={() => openVacancy()} className="mt-3 inline-block bg-primary-gold text-black px-4 py-2 rounded-md font-bold text-sm">
+            <Link to="/vacancy" className="mt-3 inline-block bg-primary-gold text-black px-4 py-2 rounded-md font-bold text-sm">
               Apply now
-            </button>
+            </Link>
           </div>
 
           {/* Subscribe */}
@@ -178,9 +167,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {vacancyOpen && (
-        <VacancyModal open={vacancyOpen} onClose={closeVacancy} presetRole={selectedRole} />
-      )}
     </footer>
   );
 };

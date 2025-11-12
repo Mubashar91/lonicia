@@ -2,14 +2,20 @@
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
-  const handleBookClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleBookClick = (e: React.MouseEvent<HTMLAnchorElement>, city: string) => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    
+
+    if (city === 'LARNACA') {
+      e.preventDefault();
+      window.open('https://n1275221.alteg.io/', '_blank');
+      return;
+    }
+
     if (isMobile) {
       e.preventDefault();
       window.open('https://api.whatsapp.com/send?phone=35799958821', '_blank');
     }
-    // On desktop, let the default href="/contact" work
+    // On desktop, let the default href="/contact" work for other cities
   };
 
   return (
@@ -56,7 +62,7 @@ const HeroSection = () => {
                   <Link
                     key={city}
                     to="/contact"
-                    onClick={handleBookClick}
+                    onClick={(e) => handleBookClick(e, city)}
                     className={`rounded-md border border-black/20 bg-gradient-to-b from-yellow-400 to-amber-500 px-4 py-3 text-sm tracking-normal font-bold uppercase text-black shadow-sm transition duration-300 whitespace-nowrap sm:px-8 sm:py-4 sm:text-base sm:tracking-wide transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] hover:shadow-md hover:from-amber-400 hover:to-yellow-500 hover:saturate-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-300/60 focus-visible:ring-offset-2 focus-visible:ring-offset-black`}
                   >
                     BOOK NOW {city}
