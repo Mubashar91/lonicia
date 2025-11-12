@@ -32,9 +32,9 @@ const Contact = () => {
     setSubmitting(true);
 
     const templateParams = {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
-      email: formData.email,
+      from_name: `${formData.firstName} ${formData.lastName}`.trim(),
+      from_email: formData.email,
+      reply_to: formData.email,
       phone: formData.phone,
       service: formData.service,
       message: formData.message,
