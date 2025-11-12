@@ -134,9 +134,6 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
                   {card.title}
                 </h3>
                 <p className="text-[14px] text-gray-400 font-poppins">{card.tag}</p>
-                {card.price && (
-                  <p className="text-[16px] text-primary-gold font-poppins font-semibold mb-2 hidden md:block">{card.price}</p>
-                )}
                 <Link to={href} className="bg-primary-gold text-black text-[14px] font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full text-center transform duration-200 hover:scale-[1.02]">
                   LEARN MORE
                 </Link>

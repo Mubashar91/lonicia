@@ -111,11 +111,10 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                   <video
                     className="absolute inset-0 w-full h-full object-contain"
                     src={encodeURI(item.src)}
-                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                     muted
                     loop
                     playsInline
-                    preload={actualIndex === activeIndex ? 'auto' : 'metadata'}
+                    preload="auto"
                     onPlay={(e) => {
                       pauseOthers(e.currentTarget);
                       handleVideoPlay(actualIndex);
@@ -185,7 +184,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                   <video
                     className="absolute inset-0 w-full h-full object-cover"
                     src={encodeURI(item.src)}
-                    poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                     muted
                     loop
                     playsInline
@@ -258,7 +256,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
                       src={encodeURI(item.src)}
-                      poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                       muted
                       loop
                       playsInline
@@ -332,7 +329,6 @@ const ServiceGallery: React.FC<ServiceGalleryProps> = ({ items, activeIndex, onC
                     <video
                       className="absolute inset-0 w-full h-full object-cover"
                       src={encodeURI(item.src)}
-                      poster={encodeURI((item as Extract<GalleryItem, { type: 'video' }>).poster)}
                       muted
                       loop
                       playsInline
