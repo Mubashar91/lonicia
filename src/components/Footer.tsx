@@ -1,10 +1,22 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
+import VacancyModal from './VacancyModal';
 
 const Footer = () => {
+  const [vacancyOpen, setVacancyOpen] = React.useState(false);
+  const [selectedRole, setSelectedRole] = React.useState<string | undefined>(undefined);
+
+  const openVacancy = (role?: string) => {
+    setSelectedRole(role);
+    setVacancyOpen(true);
+  };
+
+  const closeVacancy = () => setVacancyOpen(false);
+
   return (
     <footer className="bg-primary-dark text-primary-gold">
       <div className="container mx-auto px-4 md:px-6 lg:px-[90px] py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-8 md:gap-12 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-8 md:gap-12 mb-6">
           {/* Logo and Contact */}
           <div>
             <div className="flex items-center space-x-2 mb-6">
@@ -115,6 +127,23 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* Vacancies */}
+          <div>
+            <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Vacancies</h4>
+            <ul className="space-y-2 text-sm">
+              {['nail technician','eyelash technician','cosmetologist','aesthetic injector','brows technician'].map((r) => (
+                <li key={r}>
+                  <button onClick={() => openVacancy(r)} className="hover:text-primary-gold transition underline underline-offset-4">
+                    {r}
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <button onClick={() => openVacancy()} className="mt-3 inline-block bg-primary-gold text-black px-4 py-2 rounded-md font-bold text-sm">
+              Apply now
+            </button>
+          </div>
+
           {/* Subscribe */}
           <div>
             <h4 className="text-primary-gold font-semibold mb-4 md:mb-6 text-[16px] uppercase tracking-wide">Subscribe</h4>
@@ -149,6 +178,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      {vacancyOpen && (
+        <VacancyModal open={vacancyOpen} onClose={closeVacancy} presetRole={selectedRole} />
+      )}
     </footer>
   );
 };
