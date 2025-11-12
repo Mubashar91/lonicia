@@ -32,19 +32,17 @@ const Contact = () => {
     setSubmitting(true);
 
     const templateParams = {
-      from_name: `${formData.firstName} ${formData.lastName}`.trim(),
-      from_email: formData.email,
+      // Required by your template
+      first_name: formData.firstName,
+      last_name: formData.lastName,
+      email: formData.email,
+      option: formData.service,
+      message: formData.message,
+      // Delivery helpers
       reply_to: formData.email,
       to_email: 'mk.nails.n.beauty@gmail.com',
+      // Optional extras (kept if you add them later in the template)
       phone: formData.phone,
-      service: formData.service,
-      message: formData.message,
-      // Aliases for broader template compatibility
-      name: `${formData.firstName} ${formData.lastName}`.trim(),
-      email: formData.email,
-      user_name: `${formData.firstName} ${formData.lastName}`.trim(),
-      user_email: formData.email,
-      phone_number: formData.phone,
     };
 
     try {
