@@ -30,7 +30,7 @@ const Vacancy = () => {
   const formRef = useRef<HTMLFormElement>(null);
   // EmailJS credentials (CDN-loaded in index.html)
   const serviceID = 'service_c3a4xht';
-  const templateID = 'template_6t3u09j';
+  const templateID = 'template_8ej14gh';
   const publicKey = 'y8BtyZbzcChbe3tu8';
 
   useEffect(() => {
@@ -158,19 +158,7 @@ const Vacancy = () => {
                     className="w-full px-4 py-3 bg-[#2a2a2a] border border-gray-700 rounded-lg text-white placeholder-gray-500 text-base focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:border-transparent resize-none transition"
                   />
 
-                  <input type="hidden" name="from_name" value={`${formData.firstName} ${formData.lastName}`.trim()} />
-                  <input type="hidden" name="from_email" value={formData.email} />
-                  <input type="hidden" name="reply_to" value={formData.email} />
                   <input type="hidden" name="to_email" value="mk.nails.n.beauty@gmail.com" />
-                  {/* Aliases for broader template compatibility */}
-                  <input type="hidden" name="name" value={`${formData.firstName} ${formData.lastName}`.trim()} />
-                  <input type="hidden" name="email" value={formData.email} />
-                  <input type="hidden" name="user_name" value={`${formData.firstName} ${formData.lastName}`.trim()} />
-                  <input type="hidden" name="user_email" value={formData.email} />
-                  <input type="hidden" name="phone_number" value={formData.phone} />
-                  <input type="hidden" name="user_phone" value={formData.phone} />
-                  <input type="hidden" name="user_address" value={formData.address} />
-                  <input type="hidden" name="user_role" value={formData.role} />
 
                   <button
                     type="submit"
@@ -182,6 +170,7 @@ const Vacancy = () => {
                 </form>
               </div>
 
+              
               
             </div>
           </div>
