@@ -11,6 +11,9 @@ const Contact = () => {
     service: '',
     message: '',
   });
+  const [submitting, setSubmitting] = useState(false);
+  const endpoint = (import.meta as any).env?.VITE_FORMS_ENDPOINT as string | undefined;
+  const web3Key = (import.meta as any).env?.VITE_WEB3FORMS_KEY as string | undefined;
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -21,17 +24,42 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you! We will contact you soon to confirm your appointment.');
-    setFormData({
-      lastName: '',
-      firstName: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    });
+    setSubmitting(true);
+    try {
+      if (web3Key) {
+        const fd = new FormData();
+        fd.append('access_key', web3Key);
+        fd.append('subject', 'New Contact Submission');
+        fd.append('from_name', `${formData.firstName} ${formData.lastName}`.trim());
+        fd.append('from_email', formData.email);
+        fd.append('replyto', formData.email);
+        fd.append('phone', formData.phone);
+        fd.append('service', formData.service);
+        fd.append('message', formData.message);
+        const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd });
+        if (!res.ok) throw new Error('Failed');
+        alert('Thank you! Your message has been sent.');
+      } else if (endpoint) {
+        const fd = new FormData();
+        Object.entries(formData).forEach(([k, v]) => fd.append(k, v));
+        const res = await fetch(endpoint, { method: 'POST', body: fd });
+        if (!res.ok) throw new Error('Failed');
+        alert('Thank you! Your message has been sent.');
+      } else {
+        const subject = encodeURIComponent('New Contact Submission');
+        const body = encodeURIComponent(
+          `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nService: ${formData.service}\n\nMessage:\n${formData.message}`
+        );
+        window.location.href = `mailto:mubbii395@gmail.com?subject=${subject}&body=${body}`;
+      }
+      setFormData({ lastName: '', firstName: '', email: '', phone: '', service: '', message: '' });
+    } catch {
+      alert('Could not send your message. Please try again.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleWhatsApp = () => {

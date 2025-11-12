@@ -41,6 +41,7 @@ export default function VacancyModal({ open, onClose, presetRole }: Props) {
         fd.append('subject', `Vacancy Application: ${role}`);
         fd.append('from_name', name);
         fd.append('from_email', email);
+        fd.append('replyto', email);
         fd.append('role', role);
         fd.append('message', message);
         if (cv) fd.append('cv', cv, cv.name);
@@ -68,7 +69,7 @@ export default function VacancyModal({ open, onClose, presetRole }: Props) {
       } else {
         const subject = encodeURIComponent(`Vacancy Application: ${role}`);
         const body = encodeURIComponent(`Role: ${role}\nName: ${name}\nEmail: ${email}\nMessage: ${message}\n\n(Attach your CV if not uploaded)`);
-        window.location.href = `mailto:mk.nails.n.beauty@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:mubbii395@gmail.com?subject=${subject}&body=${body}`;
         onClose();
       }
     } catch {
