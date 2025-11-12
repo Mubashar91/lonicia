@@ -69,8 +69,8 @@ const Vacancy = () => {
       <section className="pt-8 md:pt-0 pb-12 md:pb-16">
         <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
           <div className="bg-[#1a1a1a] rounded-2xl p-6 md:p-12 shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="text-center lg:col-span-1">
+            <div className="grid grid-cols-1 gap-10 items-start justify-items-center">
+              <div className="w-full max-w-2xl text-center">
                 <h2 className="text-white font-poppins font-bold text-[28px] md:text-[32px] mb-2">
                   Apply for a Vacancy
                 </h2>
@@ -78,7 +78,7 @@ const Vacancy = () => {
                   Fill the form below. We will get back to you shortly.
                 </p>
 
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-5 max-w-md mx-auto">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-5 max-w-2xl mx-auto">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <input
                       type="text"
@@ -168,10 +168,7 @@ const Vacancy = () => {
                 </form>
               </div>
 
-              {/* Right panel placeholder image / theme */}
-              <div className="hidden lg:block">
-                <img src="/hero/girl.png" alt="Vacancy" className="w-full h-auto rounded-xl object-cover" />
-              </div>
+              
             </div>
           </div>
         </div>
