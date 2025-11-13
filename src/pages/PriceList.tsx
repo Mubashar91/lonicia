@@ -71,7 +71,7 @@ const PriceList = () => {
   },
   // Lash Extensions
   {
-    category: 'MK LASH EXTENSIONS',
+    category: ' LASH EXTENSIONS',
     subtitle: '',
     services: [
       { name: 'Classic (First time)', price: '€50' },
@@ -137,6 +137,28 @@ const PriceList = () => {
       { name: 'Braids', price: 'from €30' },
       { name: 'Bridesmaids', price: '€30' },
       { name: 'Brides (with one rehearsal; hair extensions with order)', price: 'from €200' },
+    ],
+  },
+  // Facials
+  {
+    category: 'FACIALS',
+    subtitle: '',
+    services: [
+      { name: 'Deep Cleansing Facial (1 and half hour)', price: '€65' },
+      { name: 'Gentle Facial Cleansing (atraumatic)', price: '€50' },
+      { name: 'PhotoDefense Glow Treatment (Hydrating, antioxidant facial - perfect after sun exposure)', price: '€60' },
+      { name: 'Anti-Age Therapy (with Vitamin C) — Powerful antioxidant & collagen boost', price: '€70' },
+
+      { name: 'AHA Peeling Facial (with mask & post-care) — Brighten, exfoliate & renew your skin', price: '' },
+      { name: 'Single session', price: '€50' },
+      { name: 'Course of 5 sessions (Pay for 4, get 1 FREE)', price: '€200' },
+
+      { name: 'Facial Massage Course (30 min per session)', price: '' },
+      { name: 'Single session', price: '€35' },
+      { name: '5-session course (Pay for 4, get 1 FREE)', price: '€140' },
+
+      { name: 'At-Home Facial Treatment — Professional skincare in the comfort of your home', price: '€75' },
+      { name: 'At-Home FaceDrip Cleansing — Deep cleansing with premium products at home', price: '€75' },
     ],
   },
   // Permanent Makeup (Brows, Lips, Eyeliner)

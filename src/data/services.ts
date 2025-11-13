@@ -379,7 +379,7 @@ export const makeupDetails: ServiceDetails = {
 export const makeupGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg' },
   { type: 'image', src: '/makeup/910d08ea-a0b1-4d07-aed1-0a285a604bf7.jpeg' },
-  { type: 'image', src: '/makeup/9ac263ae-5408-44bb-a381-870e78503129.jpeg' },
+  // { type: 'image', src: '/makeup/9ac263ae-5408-44bb-a381-870e78503129.jpeg' },
   { type: 'image', src: '/makeup/c6839767-1a07-4ee0-b9a7-1aa69b08906b.jpeg' },
   { type: 'image', src: '/makeup/dcc1f264-7d43-4006-be82-2c2c768216d5.jpeg' },
   { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6.jpeg' },
@@ -567,14 +567,21 @@ export const facialsDetails: ServiceDetails = {
     "Treat your skin to the care it deserves — experience the glow of healthy, beautiful skin with our expert facial treatments.",
   mainImage: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
   pricing: [
-    { name: 'Classic Facial', price: '€45' },
-    { name: 'Deep Cleansing Facial', price: '€55' },
-    { name: 'Anti-Aging Facial', price: '€65' },
-    { name: 'Hydrating Facial', price: '€50' },
-    { name: 'Brightening Facial', price: '€60' },
-    { name: 'Acne Treatment Facial', price: '€55' },
-    { name: 'Express Facial (30 min)', price: '€35' },
-    { name: 'Luxury Facial (90 min)', price: '€85' },
+    { name: 'Deep Cleansing Facial (1 and half hour)', price: '€65' },
+    { name: 'Gentle Facial Cleansing (atraumatic)', price: '€50' },
+    { name: 'PhotoDefense Glow Treatment (Hydrating, antioxidant facial - perfect after sun exposure)', price: '€60' },
+    { name: 'Anti-Age Therapy (with Vitamin C) — Powerful antioxidant & collagen boost', price: '€70' },
+
+    { name: 'AHA Peeling Facial (with mask & post-care) — Brighten, exfoliate & renew your skin', price: '' },
+    { name: 'Single session', price: '€50' },
+    { name: 'Course of 5 sessions (Pay for 4, get 1 FREE)', price: '€200' },
+
+    { name: 'Facial Massage Course (30 min per session)', price: '' },
+    { name: 'Single session', price: '€35' },
+    { name: '5-session course (Pay for 4, get 1 FREE)', price: '€140' },
+
+    { name: 'At-Home Facial Treatment — Professional skincare in the comfort of your home', price: '€75' },
+    { name: 'At-Home FaceDrip Cleansing — Deep cleansing with premium products at home', price: '€75' },
   ],
 };
 
@@ -609,14 +616,7 @@ export const aestheticsDetails: ServiceDetails = {
   closingText:
     "Discover the confidence that comes with looking and feeling your best — let our aesthetic experts help you achieve your beauty goals.",
   mainImage: '/facical/10c6fefc-2b28-4e27-a4a7-7a26c2be86ae.jpeg',
-  pricing: [
-    { name: 'Consultation', price: 'Free' },
-    { name: 'Anti-Wrinkle Treatment', price: '€150' },
-    { name: 'Dermal Fillers', price: '€200' },
-    { name: 'Skin Rejuvenation', price: '€120' },
-    { name: 'Chemical Peel', price: '€100' },
-    { name: 'Microneedling', price: '€150' },
-  ],
+  pricing: [],
 };
 
 export const aestheticsGallery: readonly GalleryItem[] = [

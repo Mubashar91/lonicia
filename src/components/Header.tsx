@@ -40,12 +40,14 @@ const Header = () => {
 
           {/* CTA (Desktop) */}
           <div className="hidden lg:flex ml-auto">
-            <Link
-              to="/contact"
+            <a
+              href="https://n1275221.alteg.io/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#D4AF37] text-white px-4 py-2 rounded-md font-bold uppercase text-xs tracking-wider shadow-sm border border-black/30 hover:brightness-95 transition"
             >
               Book an Appointment
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -95,13 +97,15 @@ const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="https://n1275221.alteg.io/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-flex items-center justify-center w-full bg-[#D4AF37] text-white px-4 py-2 rounded-md font-bold uppercase text-xs tracking-wider border border-black/30"
               onClick={() => setIsMenuOpen(false)}
             >
               Book an Appointment
-            </Link>
+            </a>
           </div>
         )}
       </nav>
