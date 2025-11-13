@@ -340,11 +340,11 @@ export const browsLashesGallery: readonly GalleryItem[] = [
   // { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
   { type: 'image', src: '/lashesbowes/one.jpeg' },
   // { type: 'image', src: '/lash/lashone.jpeg' },
-  { type: 'image', src: '/lash/lasttwo.jpeg' },
-  { type: 'image', src: '/lash/lashthree.jpeg' },
-  { type: 'image', src: '/lash/lashfour.jpeg' },
-  { type: 'image', src: '/lash/lashfive.jpeg' },
-  { type: 'image', src: '/lash/lasheight.jpeg' },
+  // { type: 'image', src: '/lash/lasttwo.jpeg' },
+  // { type: 'image', src: '/lash/lashthree.jpeg' },
+  // { type: 'image', src: '/lash/lashfour.jpeg' },
+  // { type: 'image', src: '/lash/lashfive.jpeg' },
+  // { type: 'image', src: '/lash/lasheight.jpeg' },
 ] as const;
 
 // MAKEUP data
