@@ -25,7 +25,7 @@ export default function ServiceInfoPreview({ details }: Props) {
         How It Works:
       </h3>
 
-      <p className="text-[#E8D5C4] font-poppins font-medium text-sm md:text-base leading-5 md:leading-6 text-justify mb-4 md:mb-6">
+      <p className="text-[#E8D5C4] font-poppins font-medium text-sm md:text-base leading-5 md:leading-6 text-justify mb-4 md:mb-6 whitespace-pre-line">
         {details.howItWorks}
       </p>
 

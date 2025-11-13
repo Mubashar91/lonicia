@@ -107,6 +107,38 @@ const PriceList = () => {
       { name: 'Upper lip wax / tweezers', price: '€5' },
     ],
   },
+  // Make Up
+  {
+    category: 'MAKE UP',
+    subtitle: '',
+    services: [
+      { name: 'Evening make up', price: '€90' },
+      { name: 'Special Event Make up', price: '€90' },
+      { name: 'Bridal make up', price: '€480' },
+      { name: 'Bridal trial make up', price: '€155' },
+      { name: 'Wedding guest make up', price: '€120' },
+    ],
+  },
+  // Hair Dressing
+  {
+    category: 'HAIR DRESSING',
+    subtitle: '',
+    services: [
+      { name: 'Blow dry', price: '€15' },
+      { name: 'Blow dry with steem', price: '€20' },
+      { name: 'Wavy hair with tong', price: '€20' },
+      { name: 'Botox (including blow dry)', price: '€45' },
+      { name: 'Rood colour', price: '€30' },
+      { name: 'Highlights', price: '€70 to €100' },
+      { name: 'Half hair highlights', price: '€40' },
+      { name: 'Hair cut', price: '€15' },
+      { name: 'Hair keratin', price: '€150 to €200' },
+      { name: 'Rood mtekapaz', price: '€60' },
+      { name: 'Braids', price: 'from €30' },
+      { name: 'Bridesmaids', price: '€30' },
+      { name: 'Brides (with one rehearsal; hair extensions with order)', price: 'from €200' },
+    ],
+  },
   // Permanent Makeup (Brows, Lips, Eyeliner)
   {
     category: 'PERMANENT MAKEUP',

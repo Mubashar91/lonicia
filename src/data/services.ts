@@ -33,7 +33,7 @@ export const manicureDetails: ServiceDetails = {
   aboutDescription:
     "Give your hands the care and attention they deserve.\n\nAt MK Nails & Beauty, our Manicure service is more than just nail care — it's a relaxing experience designed to rejuvenate your hands and enhance your natural beauty. Using premium products and expert techniques, we ensure your nails look flawless and feel healthy after every session.",
   howItWorks:
-    "Our manicure begins with gentle nail shaping, cuticle care, and exfoliation to remove dryness and restore smoothness. A soothing hand massage follows to improve circulation and relaxation. Finally, we apply your preferred polish — from classic shades to trendy finishes — for a clean, elegant look.",
+    "Our manicure begins with gentle nail shaping, cuticle care, and exfoliation to remove dryness and restore smoothness. A soothing hand massage follows to improve circulation and relaxation. Finally, we apply your preferred polish — from classic shades to trendy finishes — for a clean, elegant look.\n\nOur Japanese Manicure is a natural nail care treatment that originated in Japan and is designed to restore the nails’ healthy shine without using any polish or chemicals. The process involves gently buffing a special paste made from natural ingredients—such as beeswax, keratin, and sea minerals—into the nail plate, followed by a fine powder that seals in nutrients and gives a glossy, pinkish finish. This treatment strengthens weak or damaged nails, promotes natural growth, and leaves them looking beautifully healthy and polished—completely naturally.\n\nParaffin Therapy for Hands and Feet is a deeply nourishing and relaxing treatment that helps restore softness and hydration to the skin. Warm paraffin wax is applied to the hands or feet, creating a gentle heat that opens pores, improves blood circulation, and locks in moisture. As the wax cools, it leaves the skin feeling silky smooth and rejuvenated. This therapy is especially beneficial for dry, rough skin and can also help soothe joint pain and stiffness, offering both beauty and therapeutic benefits.",
   whatToExpect: [
     'Perfectly shaped and polished nails.',
     'Hydrated, soft, and refreshed hands.',
@@ -220,8 +220,8 @@ export const pedicureGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/pedicure/pedicuremian.jpeg' },
   { type: 'image', src: '/pedicure/pedi1.jpeg' },
   { type: 'image', src: '/pedicure/102ae395-dc87-4ae2-b17b-c1a1e100e466.jpeg' },
-  { type: 'image', src: '/pedicure/69eb3575-c6c4-43a9-90a7-489236020709.jpeg' },
-  { type: 'image', src: '/pedicure/69f64207-9f7a-4c6d-885d-e2dcf6bbb8b1.jpeg' },
+  // { type: 'image', src: '/pedicure/69eb3575-c6c4-43a9-90a7-489236020709.jpeg' },
+  // { type: 'image', src: '/pedicure/69f64207-9f7a-4c6d-885d-e2dcf6bbb8b1.jpeg' },
   { type: 'image', src: '/pedicure/a751e6a6-69cd-4643-8bbc-539850dbd14b.jpeg' },
   { type: 'image', src: '/pedicure/d71a39d6-e8a3-4a6a-90b4-ccd25da99112.jpeg' },
   { type: 'image', src: '/pedicure/e90cb8ef-5eae-4dab-9611-dc37200d53b6.jpeg' },
@@ -233,7 +233,7 @@ export const laserDetails: ServiceDetails = {
   category: 'LASER HAIR REMOVAL',
   aboutTitle: 'About this Services',
   aboutDescription:
-    "Experience smooth, hair-free skin with our advanced laser hair removal treatments.\n\nAt MK Nails & Beauty, we use state-of-the-art laser technology to provide safe, effective, and long-lasting hair removal for both men and women. Our certified technicians customize each treatment to your skin type and hair color, ensuring optimal results with minimal discomfort.",
+    "Experience smooth, hair-free skin with our advanced laser hair removal treatments.\n\nAt MK Nails & Beauty, we use state-of-the-art laser technology to provide safe, effective, and long-lasting hair removal for both men and women. Our Laser hair removal with AI-technology customize each treatment to your skin type and hair color, ensuring optimal results with minimal discomfort.",
   howItWorks:
     "Our laser hair removal process uses concentrated light beams that target hair follicles. The pigment in the follicles absorbs the light, which destroys the hair. A consultation determines your treatment plan based on your skin tone, hair type, and desired results. Multiple sessions are typically needed for best results, as hair grows in cycles.",
   whatToExpect: [
@@ -368,12 +368,11 @@ export const makeupDetails: ServiceDetails = {
     "Feel confident and beautiful — let our makeup artists bring out your best features for any special moment.",
   mainImage: '/makeup/75eb0e3c-87e3-456f-9e97-4283167a2f06.jpeg',
   pricing: [
-    { name: 'Day Makeup', price: '€30' },
-    { name: 'Evening Makeup', price: '€40' },
-    { name: 'Bridal Makeup', price: '€60' },
-    { name: 'Makeup Trial', price: '€35' },
-    { name: 'Special Event Makeup', price: '€45' },
-    { name: 'Makeup Lesson (1 hour)', price: '€50' },
+    { name: 'Evening make up', price: '€90' },
+    { name: 'Special Event Make up', price: '€90' },
+    { name: 'Bridal make up', price: '€480' },
+    { name: 'Bridal trial make up', price: '€155' },
+    { name: 'Wedding guest make up', price: '€120' },
   ],
 };
 
@@ -402,7 +401,7 @@ export const permanentMakeupDetails: ServiceDetails = {
     'Save time on daily makeup application.',
     'Waterproof and smudge-proof.',
     'Professional consultation and design.',
-    'Touch-up session included in pricing.',
+   
     'Strict hygiene and safety protocols.',
   ],
   closingText:
@@ -440,7 +439,7 @@ export const permanentMakeupGallery: readonly GalleryItem[] = [
 // BODY SLIM TREATMENT data
 export const bodySlimDetails: ServiceDetails = {
   category: 'BODY SLIM TREATMENT',
-  aboutTitle: 'About this Services',
+  aboutTitle: 'Body and Face SphereSculpt treatments',
   aboutDescription:
     "Transform your body with our advanced body slimming treatments.\n\nAt MK Nails & Beauty, we offer cutting-edge body contouring and slimming treatments designed to help you achieve your desired shape. Using state-of-the-art technology and proven techniques, our treatments target stubborn fat, reduce cellulite, and tone your body for a more sculpted appearance.",
   howItWorks:
@@ -458,10 +457,35 @@ export const bodySlimDetails: ServiceDetails = {
     "Achieve the body you've always wanted — let our advanced treatments help you look and feel your absolute best.",
   mainImage: '/body-slim/f706e63e-333f-4ed7-b53e-728e4c791e68.jpeg',
   pricing: [
-    { name: 'Single Session', price: '€60' },
-    { name: 'Package of 5 Sessions', price: '€270' },
-    { name: 'Package of 10 Sessions', price: '€500' },
-    { name: 'Consultation', price: 'Free' },
+    { name: 'SPHERESCULPT – GLUTES AND LEGS', price: '' },
+    { name: 'Glutes and Legs (40 min)', price: '€45' },
+    { name: 'Glutes and Legs (4 sessions)', price: '€150' },
+    { name: 'Glutes and Legs (6 sessions)', price: '€250' },
+    { name: 'Glutes and Legs (10 sessions)', price: '€400' },
+
+    { name: 'SPHERESCULPT – ABDOMINAL', price: '' },
+    { name: 'Abdominal "stomach" (30 min)', price: '€35' },
+    { name: 'Abdominal (4 sessions)', price: '€120' },
+    { name: 'Abdominal (6 sessions)', price: '€190' },
+    { name: 'Abdominal (10 sessions)', price: '€320' },
+
+    { name: 'SPHERESCULPT – ABD. + GLUTES & LEGS', price: '' },
+    { name: 'Abd. "stomach", Glutes & Legs (60 min)', price: '€55' },
+    { name: 'Abd. + Glutes & Legs (4 sess.)', price: '€190' },
+    { name: 'Abd. + Glutes & Legs (6 sess.)', price: '€300' },
+    { name: 'Abd. + Glutes & Legs (10 sess.)', price: '€500' },
+
+    { name: 'SPHERESCULPT – UPPER UNDER ARMS', price: '' },
+    { name: 'Upper under Arms (20 min)', price: '€25' },
+    { name: 'Upper under Arms (4 sessions)', price: '€80' },
+    { name: 'Upper under Arms (6 sessions)', price: '€130' },
+    { name: 'Upper under Arms (10 sessions)', price: '€220' },
+
+    { name: 'SPHERESCULPT – FACE AND NECK', price: '' },
+    { name: 'Face and Neck (30 min)', price: '€35' },
+    { name: 'Face and Neck (4 sessions)', price: '€120' },
+    { name: 'Face and Neck (6 sessions)', price: '€190' },
+    { name: 'Face and Neck (10 sessions)', price: '€320' },
   ],
 };
 
@@ -496,15 +520,19 @@ export const hairDressingDetails: ServiceDetails = {
     "Look and feel amazing with hair that turns heads — let our expert stylists create your perfect look.",
   mainImage: '/hairs-dessing/26f12c99-a456-41e9-b3fb-570373a6f52c.jpeg',
   pricing: [
-    { name: 'Haircut (Women)', price: '€25' },
-    { name: 'Haircut (Men)', price: '€15' },
-    { name: 'Blow Dry', price: '€20' },
-    { name: 'Hair Color (Full)', price: '€60' },
-    { name: 'Highlights', price: '€70' },
-    { name: 'Balayage', price: '€80' },
-    { name: 'Hair Treatment', price: '€30' },
-    { name: 'Keratin Treatment', price: '€100' },
-    { name: 'Updo/Special Styling', price: '€40' },
+    { name: 'Blow dry', price: '€15' },
+    { name: 'Blow dry with steem', price: '€20' },
+    { name: 'Wavy hair with tong', price: '€20' },
+    { name: 'Botox (including blow dry)', price: '€45' },
+    { name: 'Rood colour', price: '€30' },
+    { name: 'Highlights', price: '€70 to €100' },
+    { name: 'Half hair highlights', price: '€40' },
+    { name: 'Hair cut', price: '€15' },
+    { name: 'Hair keratin', price: '€150 to €200' },
+    { name: 'Rood mtekapaz', price: '€60' },
+    { name: 'Braids', price: 'from €30' },
+    { name: 'Bridesmaids', price: '€30' },
+    { name: 'Brides (with one rehearsal; hair extensions with order)', price: 'from €200' },
   ],
 };
 
