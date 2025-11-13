@@ -337,7 +337,7 @@ export const browsLashesGallery: readonly GalleryItem[] = [
   // { type: 'video', src: '/lashesbowes/two.mp4', poster: '/lashesbowes/one.jpeg' },
   { type: 'video', src: '/lash/lash1video.mp4', poster: '/lash/lashone.jpeg' },
   // { type: 'video', src: '/lash/lash2video.mp4', poster: '/lash/lasheight.jpeg' },
-  { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
+  // { type: 'video', src: '/lash/lash3video.mp4', poster: '/lash/lashthree.jpeg' },
   { type: 'image', src: '/lashesbowes/one.jpeg' },
   // { type: 'image', src: '/lash/lashone.jpeg' },
   { type: 'image', src: '/lash/lasttwo.jpeg' },
