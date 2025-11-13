@@ -283,7 +283,7 @@ export const laserDetails: ServiceDetails = {
     { name: '2 (Chest, Back, Armpits, Abdominal)', price: '€100' },
     { name: '3 (Full Legs, Arms, Armpits)', price: '€100' },
     { name: '4 (6 Full Body visits)', price: '€750' },
-    { name: '5 (4 Full Body visits)', price: '' },
+    { name: '5 (4 Full Body visits)', price: '€500' },
   ],
 };
 
