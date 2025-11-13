@@ -63,6 +63,9 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto justify-items-center">
             {exploreServicesDefault.map((card, idx) => {
               const title = card.title.trim().toUpperCase();
+              const displayTitle = card.title
+                ? card.title.toLowerCase().replace(/^./, (c) => c.toUpperCase())
+                : '';
               const href = title === 'MANICURE'
                 ? '/services/manicure'
                 : title === 'LASH EXTENSIONS'
@@ -125,8 +128,8 @@ const Services = () => {
                 
                 {/* Service Info */}
                 <div className="flex flex-col gap-2 px-2">
-                  <h3 className="font-poppins text-[20px] font-semibold text-white uppercase tracking-wide">
-                    {card.title}
+                  <h3 className="font-poppins text-[20px] font-semibold text-white tracking-wide">
+                    {displayTitle}
                   </h3>
                   <p className="text-[14px] text-gray-400 font-poppins mb-2">{card.tag}</p>
                   <Link to={href} className="bg-primary-gold text-black text-[14px] font-bold px-6 py-3 rounded-lg hover:bg-opacity-90 transition uppercase tracking-wide w-full text-center transform duration-200 hover:scale-[1.02]">

@@ -52,7 +52,7 @@ const About = () => {
           <div className="mb-12">
             <h2 data-reveal data-delay=".12s" className="text-[#D4AF37] font-poppins text-2xl font-semibold mb-4">Meet</h2>
             <h3 data-reveal data-delay=".18s" className="text-[#D4AF37] font-poppins  md:text-4xl font-bold mb-8">
-              Maria Khudobliak | FOUNDER OF MK NAILS & BEAUTY
+              Maria Khudobliak  FOUNDER OF MK NAILS & BEAUTY
             </h3>
           </div>
 
@@ -133,7 +133,7 @@ const About = () => {
                 </div>
               </div>
 
-              <p data-reveal data-delay=".38s" className="font-poppins font-normal text-[16px] md:text-[18px] leading-[32px] md:leading-[35px] text-white italic mt-4 md:mt-5">
+              <p data-reveal data-delay=".38s" className="font-poppins font-normal text-[16px] md:text-[18px] leading-[32px] md:leading-[35px] text-white mt-4 md:mt-5">
                 Your beauty, confidence & comfort are my priority. I can't wait to welcome you to MK Nails & Beauty and share the best in beauty with you!
               </p>
 
