@@ -138,7 +138,7 @@ const About = () => {
               </p>
 
               <p data-reveal data-delay=".44s" className="text-white font-poppins text-[16px] md:text-[18px] leading-[32px] md:leading-[35px] font-semibold mt-3 md:mt-4 flex items-center gap-2">
-                Visit us in Larnaca and Nicosia! DM for bookings
+                Visit us in Larnaca and Nicosia! 
                 <span className="text-[#D4AF37] text-[28px] md:text-[36px] leading-none ml-2">”</span>
               </p>
             </div>
