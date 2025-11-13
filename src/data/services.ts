@@ -349,7 +349,7 @@ export const browsLashesGallery: readonly GalleryItem[] = [
 
 // MAKEUP data
 export const makeupDetails: ServiceDetails = {
-  category: 'MAKEUP',
+  category: 'Make Up',
   aboutTitle: 'About this Services',
   aboutDescription:
     "Look stunning for any occasion with our professional makeup services.\n\nAt MK Nails & Beauty, our talented makeup artists create flawless looks tailored to your style and event. Whether you need a natural everyday glow, glamorous evening makeup, or a complete bridal transformation, we use premium products and expert techniques to enhance your natural beauty and boost your confidence.",
@@ -383,7 +383,7 @@ export const makeupGallery: readonly GalleryItem[] = [
   { type: 'image', src: '/makeup/c6839767-1a07-4ee0-b9a7-1aa69b08906b.jpeg' },
   { type: 'image', src: '/makeup/dcc1f264-7d43-4006-be82-2c2c768216d5.jpeg' },
   { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6.jpeg' },
-  { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6 (1).jpeg' },
+  // { type: 'image', src: '/makeup/e6b0bd34-4b2e-46e3-9c6d-efc6c38a7ee6 (1).jpeg' },
 ] as const;
 
 // PERMANENT MAKEUP data

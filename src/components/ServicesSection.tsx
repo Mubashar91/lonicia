@@ -52,7 +52,7 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
               price: 'From €40',
             },
             {
-              title: 'MAKEUP',
+              title: 'Makeup',
               tag: 'Women',
               url: '/realmackup.jpeg',
               price: 'From €30',
