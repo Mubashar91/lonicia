@@ -69,26 +69,38 @@ export default function ServiceInfoPreview({ details }: Props) {
             
             {/* Pricing Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-              {details.pricing.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="group relative bg-black/40 backdrop-blur-sm border border-[#D4AF37]/30 rounded-lg p-3 md:p-3.5 hover:border-[#D4AF37] hover:bg-[#D4AF37]/5 transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/20 hover:-translate-y-1"
-                >
-                  <div className="flex justify-between items-center gap-3">
-                    <div className="flex-1">
-                      <p className="text-white font-poppins text-sm md:text-base font-medium leading-snug group-hover:text-[#D4AF37] transition-colors duration-300">
+              {details.pricing.map((item, idx) => {
+                const isSubtitle = item.price === '';
+                if (isSubtitle) {
+                  return (
+                    <div key={idx} className="md:col-span-2">
+                      <div className="text-center text-[#D4AF37] font-poppins font-bold text-xl md:text-2xl uppercase tracking-wide py-2">
                         {item.name}
-                      </p>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <div className="h-px w-6 bg-gradient-to-r from-transparent to-[#D4AF37]/50 hidden md:block"></div>
-                      <p className="text-[#D4AF37] font-poppins text-base md:text-lg font-bold whitespace-nowrap">
-                        {item.price}
-                      </p>
+                  );
+                }
+                return (
+                  <div
+                    key={idx}
+                    className="group relative bg-black/40 backdrop-blur-sm border border-[#D4AF37]/30 rounded-lg p-3 md:p-3.5 hover:border-[#D4AF37] hover:bg-[#D4AF37]/5 transition-all duration-300 hover:shadow-lg hover:shadow-[#D4AF37]/20 hover:-translate-y-1"
+                  >
+                    <div className="flex justify-between items-center gap-3">
+                      <div className="flex-1">
+                        <p className="text-white font-poppins text-sm md:text-base font-medium leading-snug group-hover:text-[#D4AF37] transition-colors duration-300">
+                          {item.name}
+                        </p>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="h-px w-6 bg-gradient-to-r from-transparent to-[#D4AF37]/50 hidden md:block"></div>
+                        <p className="text-[#D4AF37] font-poppins text-base md:text-lg font-bold whitespace-nowrap">
+                          {item.price}
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Bottom Note */}
