@@ -53,34 +53,6 @@ const SEO: React.FC<SEOProps> = ({ title, description, canonicalUrl, noIndex, js
     }
     robotsMeta.content = robotsValue;
 
-    const logoPath = '/logo.jpeg';
-
-    let faviconLink = document.querySelector<HTMLLinkElement>('link[rel="icon"]');
-    if (!faviconLink) {
-      faviconLink = document.createElement('link');
-      faviconLink.rel = 'icon';
-      document.head.appendChild(faviconLink);
-    }
-    faviconLink.type = 'image/jpeg';
-    faviconLink.href = logoPath;
-
-    let shortcutIcon = document.querySelector<HTMLLinkElement>('link[rel="shortcut icon"]');
-    if (!shortcutIcon) {
-      shortcutIcon = document.createElement('link');
-      shortcutIcon.rel = 'shortcut icon';
-      document.head.appendChild(shortcutIcon);
-    }
-    shortcutIcon.type = 'image/jpeg';
-    shortcutIcon.href = logoPath;
-
-    let appleIcon = document.querySelector<HTMLLinkElement>('link[rel="apple-touch-icon"]');
-    if (!appleIcon) {
-      appleIcon = document.createElement('link');
-      appleIcon.rel = 'apple-touch-icon';
-      document.head.appendChild(appleIcon);
-    }
-    appleIcon.href = logoPath;
-
     if (canonicalUrl) {
       let canonicalLink = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
       if (!canonicalLink) {
