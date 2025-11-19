@@ -1,5 +1,13 @@
+import SEO from '../components/SEO';
+
 export default function NotFound() {
   return (
+    <>
+      <SEO
+        title="Page Not Found | MK Nails & Beauty"
+        description="The page you were looking for at MK Nails & Beauty could not be found. Return to the homepage to discover our nails and beauty services in Cyprus."
+        noIndex
+      />
     <div className="min-h-screen bg-black flex items-center justify-center px-4">
       <div className="text-center">
         <h1 className="text-primary-gold font-poppins font-bold text-5xl md:text-6xl mb-4">404</h1>
@@ -14,5 +22,6 @@ export default function NotFound() {
         </a>
       </div>
     </div>
+    </>
   );
 }

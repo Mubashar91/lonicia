@@ -1,7 +1,9 @@
 // About.jsx
 import { useEffect } from "react";
 
+import Trust from "../components/Trust";
 import Reviews from "../components/Reviews";
+import SEO from "../components/SEO";
 
 const About = () => {
   useEffect(() => {
@@ -33,6 +35,12 @@ const About = () => {
     return () => io.disconnect();
   }, []);
   return (
+    <>
+      <SEO
+        title="About MK Nails & Beauty | Luxury Nails & Beauty Salon in Cyprus"
+        description="Learn about MK Nails & Beauty in Larnaca and Nicosia, Cyprus – founded by Maria Khudobliak with over 16 years of beauty industry experience offering nails, laser hair removal, facials, brows, lashes and body treatments."
+        canonicalUrl="https://mknailsandbeauty.com/about"
+      />
     <div className="min-h-screen bg-black">
       {/* ── Hero ── */}
       <section className="py-3">
@@ -148,9 +156,13 @@ const About = () => {
 
   
       <div data-reveal data-delay=".5s">
+        <Trust />
+      </div>
+      <div data-reveal data-delay=".6s">
         <Reviews />
       </div>
     </div>
+    </>
   );
 };
 

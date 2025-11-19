@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import SEO from "../components/SEO";
 
 const Shops = () => {
   useEffect(() => {
@@ -103,6 +104,12 @@ const Shops = () => {
   ];
 
   return (
+    <>
+      <SEO
+        title="Our Shops | MK Nails & Beauty Larnaca & Nicosia Locations"
+        description="Discover MK Nails & Beauty salon locations in Larnaca and Nicosia, Cyprus, offering nails, permanent makeup, laser hair removal, facials, body slim treatments, lash extensions, hairdressing and more."
+        canonicalUrl="https://mknailsandbeauty.com/shops"
+      />
     <div className="min-h-screen bg-black">
       <section className="bg-black py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -350,6 +357,7 @@ const Shops = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

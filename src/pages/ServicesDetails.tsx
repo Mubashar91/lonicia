@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ServiceGallery from '../components/ServiceGallery';
 import ServiceInfoPreview from '../components/ServiceInfoPreview';
+import SEO from '../components/SEO';
 import { manicureDetails, manicureGallery, lashDetails, lashGallery, pedicureDetails, pedicureGallery, laserDetails, laserGallery, browsLashesDetails, browsLashesGallery, makeupDetails, makeupGallery, permanentMakeupDetails, permanentMakeupGallery, bodySlimDetails, bodySlimGallery, hairDressingDetails, hairDressingGallery, facialsDetails, facialsGallery, aestheticsDetails, aestheticsGallery, exploreServicesDefault } from '../data/services';
 
 const ServicesDetails = () => {
@@ -33,6 +34,12 @@ const ServicesDetails = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   return (
+    <>
+      <SEO
+        title={`${serviceDetails.category} | MK Nails & Beauty Services in Cyprus`}
+        description={`Learn more about ${serviceDetails.category.toLowerCase()} at MK Nails & Beauty including treatment details, benefits and results in Larnaca and Nicosia, Cyprus.`}
+        canonicalUrl={`https://mknailsandbeauty.com/services-details`}
+      />
     <div className="min-h-screen bg-black">
       <ServiceGallery items={galleryItems} activeIndex={activeIndex} onChange={setActiveIndex} />
       {/* Service Detail Section */}
@@ -103,6 +110,7 @@ const ServicesDetails = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

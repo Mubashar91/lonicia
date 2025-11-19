@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import SEO from "../components/SEO";
 
 const PriceList = () => {
   useEffect(() => {
@@ -296,6 +297,12 @@ const PriceList = () => {
 
 
   return (
+    <>
+      <SEO
+        title="Price List | MK Nails & Beauty Services in Larnaca & Nicosia"
+        description="View the full price list for MK Nails & Beauty services including manicure, pedicure, lash extensions, brows and lashes, facials, permanent makeup, laser hair removal and body & face treatments in Cyprus."
+        canonicalUrl="https://mknailsandbeauty.com/price-list"
+      />
     <div className="min-h-screen bg-black">
       {/* Price List Label */}
       <section className="pt-12 md:pt-16 pb-6 md:pb-8 bg-black">
@@ -358,6 +365,7 @@ const PriceList = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

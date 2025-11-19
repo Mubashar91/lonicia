@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import LazyImage from '../components/LazyImage';
 import { exploreServicesDefault } from '../data/services';
+import SEO from '../components/SEO';
 
 const Services = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -43,6 +44,12 @@ const Services = () => {
     return () => window.removeEventListener('resize', apply);
   }, []);
   return (
+    <>
+      <SEO
+        title="Services | MK Nails & Beauty Salon in Larnaca & Nicosia"
+        description="Explore MK Nails & Beauty services including manicure, pedicure, lash extensions, laser hair removal, brows and lashes, permanent makeup, body slim treatments, facials, hairdressing and makeup in Cyprus."
+        canonicalUrl="https://mknailsandbeauty.com/services"
+      />
     <div className="min-h-screen bg-black">
       <section className="bg-black text-white pt-0 pb-20 md:pb-28">
         <div className="container mx-auto px-6 lg:px-12">
@@ -63,7 +70,9 @@ const Services = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto justify-items-center">
             {exploreServicesDefault.map((card, idx) => {
               const title = card.title.trim().toUpperCase();
-              const displayTitle = card.title
+              const displayTitle = title === 'MAKEUP'
+                ? 'Make Up'
+                : card.title
                 ? card.title.toLowerCase().replace(/^./, (c) => c.toUpperCase())
                 : '';
               const href = title === 'MANICURE'
@@ -142,6 +151,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

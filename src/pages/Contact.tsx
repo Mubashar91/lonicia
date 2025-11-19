@@ -1,5 +1,6 @@
 // Contact.jsx
 import { useState } from 'react';
+import SEO from '../components/SEO';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -74,6 +75,12 @@ const Contact = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Contact MK Nails & Beauty | Book Appointments in Larnaca & Nicosia"
+        description="Contact MK Nails & Beauty to book your appointment or ask questions about nails, laser hair removal, facials, brows, lashes, body slim treatments, hairdressing and more in Larnaca and Nicosia, Cyprus."
+        canonicalUrl="https://mknailsandbeauty.com/contact"
+      />
     <div className="min-h-screen bg-black">
       {/* Hero Section */}
       <section className="hidden md:block pt-16 pb-8 md:pb-12">
@@ -217,6 +224,7 @@ const Contact = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

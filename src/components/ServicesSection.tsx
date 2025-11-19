@@ -96,7 +96,9 @@ const ServicesSection = ({ noTopPadding = false, padXClass = 'px-6 lg:px-12' }: 
             // },
           ].map((card, idx) => {
             const titleUpper = card.title.trim().toUpperCase();
-            const displayTitle = card.title
+            const displayTitle = titleUpper === 'MAKEUP'
+              ? 'Make Up'
+              : card.title
               ? card.title.toLowerCase().replace(/^./, (c) => c.toUpperCase())
               : '';
             const href = titleUpper.includes('LASH EXTENSIONS')

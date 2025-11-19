@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const AcademyBanner = () => {
   return (
     <section className="bg-[#2B2B2B] text-white h-[320px] md:h-[360px] lg:h-[300px] relative overflow-hidden flex items-center">
@@ -24,12 +26,12 @@ const AcademyBanner = () => {
           </h2>
 
           {/* CTA Button */}
-          <a
-            href="/vacancy"
+          <Link
+            to="/vacancy"
             className="inline-block bg-primary-gold text-black px-10 py-3 rounded-lg font-bold hover:bg-opacity-90 transition uppercase tracking-wide text-[14px]"
           >
             JOIN US TODAY
-          </a>
+          </Link>
         </div>
       </div>
     </section>

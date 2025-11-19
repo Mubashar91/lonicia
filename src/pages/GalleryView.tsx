@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import SEO from '../components/SEO';
 
 export type GalleryItem =
   | { type: 'video'; src: string; poster: string }
@@ -182,21 +183,34 @@ const GalleryView: React.FC = () => {
 
   if (items.length === 0) {
     return (
-      <section className="min-h-[80vh] bg-black text-white py-6 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-xl text-gray-400 mb-4">No media items found</h2>
-          <button
-            onClick={() => navigate(-1)}
-            className="h-10 px-4 rounded-full bg-[#D4AF37] text-black font-semibold border border-black/20 hover:brightness-95"
-          >
-            Go Back
-          </button>
-        </div>
-      </section>
+      <>
+        <SEO
+          title="Gallery | MK Nails & Beauty Treatments & Results"
+          description="Browse the MK Nails & Beauty gallery showcasing nails, lashes, facials, permanent makeup, laser hair removal and body treatment results in Cyprus."
+          canonicalUrl="https://mknailsandbeauty.com/gallery"
+        />
+        <section className="min-h-[80vh] bg-black text-white py-6 flex items-center justify-center">
+          <div className="text-center">
+            <h2 className="text-xl text-gray-400 mb-4">No media items found</h2>
+            <button
+              onClick={() => navigate(-1)}
+              className="h-10 px-4 rounded-full bg-[#D4AF37] text-black font-semibold border border-black/20 hover:brightness-95"
+            >
+              Go Back
+            </button>
+          </div>
+        </section>
+      </>
     );
   }
 
   return (
+    <>
+      <SEO
+        title="Gallery | MK Nails & Beauty Treatments & Results"
+        description="Browse the MK Nails & Beauty gallery showcasing nails, lashes, facials, permanent makeup, laser hair removal and body treatment results in Cyprus."
+        canonicalUrl="https://mknailsandbeauty.com/gallery"
+      />
     <section className="min-h-[90vh] bg-black text-white py-8">
       <div className="container mx-auto px-4 md:px-6 lg:px-12">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4 md:mb-6">
@@ -279,6 +293,7 @@ const GalleryView: React.FC = () => {
         {/* Removed mobile bubble indicators */}
       </div>
     </section>
+    </>
   );
 };
 

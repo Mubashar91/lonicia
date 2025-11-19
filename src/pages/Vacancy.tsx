@@ -1,6 +1,7 @@
 // Vacancy.jsx
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const ROLES = [
   'nail technician',
@@ -65,6 +66,12 @@ const Vacancy = () => {
   };
 
   return (
+    <>
+      <SEO
+        title="Vacancies | Work at MK Nails & Beauty in Cyprus"
+        description="Apply for vacancies at MK Nails & Beauty in Cyprus, including nail technician, eyelash technician, cosmetologist, aesthetic injector and brows technician roles."
+        canonicalUrl="https://mknailsandbeauty.com/vacancy"
+      />
     <div className="min-h-screen bg-black">
       <section className="pt-8 md:pt-0 pb-12 md:pb-16">
         <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-7xl">
@@ -177,6 +184,7 @@ const Vacancy = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
