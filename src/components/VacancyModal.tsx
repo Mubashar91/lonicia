@@ -69,7 +69,7 @@ export default function VacancyModal({ open, onClose, presetRole }: Props) {
       } else {
         const subject = encodeURIComponent(`Vacancy Application: ${role}`);
         const body = encodeURIComponent(`Role: ${role}\nName: ${name}\nEmail: ${email}\nMessage: ${message}\n\n(Attach your CV if not uploaded)`);
-        window.location.href = `mailto:mubbii395@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:info@mknailsnbeauty.com?subject=${subject}&body=${body}`;
         onClose();
       }
     } catch {

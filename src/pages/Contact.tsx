@@ -41,7 +41,7 @@ const Contact = () => {
       message: formData.message,
       // Delivery helpers
       reply_to: formData.email,
-      to_email: 'mk.nails.n.beauty@gmail.com',
+      to_email: 'info@mknailsnbeauty.com',
       // Optional extras (kept if you add them later in the template)
       phone: formData.phone,
     };

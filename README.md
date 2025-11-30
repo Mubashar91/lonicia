@@ -112,7 +112,7 @@ This is a custom website project. For any changes or improvements, please contac
 ## 📞 Support
 
 For any questions or issues, please contact:
-- Email: info@mknails.com
+- Email: info@mknailsnbeauty.com
 - Phone: (555) 123-4567
 
 ---
