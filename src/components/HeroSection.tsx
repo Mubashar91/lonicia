@@ -5,6 +5,12 @@ const HeroSection = () => {
   const handleBookClick = (e: React.MouseEvent<HTMLAnchorElement>, city: string) => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+    if (city === 'NICOSIA') {
+      e.preventDefault();
+      window.open('https://n1416322.alteg.io/', '_blank');
+      return;
+    }
+
     if (city === 'LARNACA') {
       e.preventDefault();
       window.open('https://n1275221.alteg.io/', '_blank');
@@ -15,7 +21,6 @@ const HeroSection = () => {
       e.preventDefault();
       window.open('https://api.whatsapp.com/send?phone=35799958821', '_blank');
     }
-    // On desktop, let the default href="/contact" work for other cities
   };
 
   return (

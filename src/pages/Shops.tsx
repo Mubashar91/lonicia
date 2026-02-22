@@ -99,7 +99,8 @@ const Shops = () => {
       address: "",
       addressLine2: "",
       hours: "",
-      comingSoon: true,
+      image: "/new/new.jfif",
+      hasImage: true,
     },
   ];
 
